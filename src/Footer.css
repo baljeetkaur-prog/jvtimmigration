@@ -1,0 +1,507 @@
+/* Footer Section */
+.footer-section {
+  width: 100%; /* Fits within parent container */
+  padding-top: 150px; /* Space for overlay */
+  position: relative;
+  color: white;
+  font-family: Arial, sans-serif;
+  background-size: cover;
+  flex-shrink:0; 
+  margin-top:auto; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Footer Overlay Banner */
+.footer-overlay {
+  position: absolute;
+  top: -120px; /* Half outside footer */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  background-color: #ffc000;
+}
+.footer-overlay img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 5px solid #ffc000;
+}
+
+.footer-overlay-content {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-overlay-content h2 {
+  color: #fff;
+  font-size: 49px;
+  margin-bottom: 50px;
+}
+
+.footer-overlay-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-overlay-buttons .btn {
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-overlay-buttons .black-btn {
+  background: #000;
+  color: #fff;
+}
+
+.footer-overlay-buttons .black-btn:hover {
+  background: #ffc000;
+  color: #000;
+}
+
+.footer-overlay-buttons .white-btn {
+  background: #fff;
+  color: #000;
+}
+
+.footer-overlay-buttons .white-btn:hover {
+  background: #ffc000;
+  color: #000;
+}
+
+/* Footer Content Container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  padding: 60px 20px;
+  box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+}
+
+/* Left Section */
+.footer-left .footer-logo {
+  width: 180px;
+  margin-bottom: 15px;
+}
+
+.footer-left .footer-desc {
+  margin-bottom: 15px;
+  color: #000;
+  line-height: 1.6;
+}
+
+.footer-left .btn.black-btn {
+  padding: 10px 20px;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-left .btn.black-btn:hover {
+  background: #ffc000;
+  color: #000;
+}
+
+/* Quick Links */
+.footer-links h3,
+.footer-locations h3,
+.footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  border-bottom: 2px solid #ffc000;
+  color: #000;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  color: #54595F;
+}
+
+.footer-links .arrow {
+  color: #ffc000;
+  margin-right: 8px;
+}
+
+/* Locations and Contact */
+.footer-locations p,
+.footer-contact p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #54595F;
+  line-height: 1.5;
+}
+
+.underline {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 20px;
+  color: #54595F;
+  margin-top: 15px;
+}
+
+.social-icons svg {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease-in-out;
+}
+
+.social-icons svg:hover {
+  color: #ffc000;
+  cursor: pointer;
+  transform: translateY(-4px);
+}
+
+/* Buttons General */
+.btn {
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Contact Us Button */
+.footer-overlay-buttons .contact-btn {
+  position: relative;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 50px 15px 25px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.5s ease;
+}
+
+.footer-overlay-buttons .contact-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 100%;
+  background: #ffc000;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  transform: translateX(0);
+  transition: all 0.5s ease;
+  z-index: 0;
+  transform-origin: right;
+}
+
+.footer-overlay-buttons .contact-btn span {
+  position: relative;
+  z-index: 1;
+}
+
+.footer-overlay-buttons .contact-btn:hover::after {
+  width: 100%;
+  left: 0;
+  border-radius: 50px;
+  transform: translateX(0);
+}
+
+.footer-overlay-buttons .contact-btn:hover span {
+  color: #000;
+}
+
+/* Overlay About Us link style */
+.footer-overlay-buttons .about-link {
+  position: relative;
+  background: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-overlay-buttons .about-link span {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+
+.footer-overlay-buttons .about-link::after {
+  content: "→";
+  display: inline-block;
+  color: #ffc000;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.footer-overlay-buttons .about-link:hover::after {
+  transform: translateX(5px);
+}
+
+.footer-locations .underline {
+  font-size: 16px;
+  color: #000;
+}
+
+.footer-contact strong {
+  font-size: 16px;
+  color: #000;
+}
+
+.location-icon {
+  color: #ffc000;
+  margin-right: 8px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.footercontact-icon {
+  color: #ffc000;
+  margin-right: 6px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom-bar {
+  max-width: 1200px; /* Match footer-container max-width */
+  margin: 0 auto; /* Center the bottom bar */
+  background-color: #000; /* Black background */
+  text-align: center;
+  padding: 15px 20px;
+  box-sizing: border-box; /* Ensure padding stays within width */
+}
+
+/* Full-width background for footer-bottom-bar */
+.footer-bottom-bar-wrapper {
+  width: 100%;
+  background-color: #000; /* Ensure background spans full width */
+}
+
+/* Ensure content stays within bounds */
+.footer-bottom-bar p {
+  color: #fff;
+  font-size: 14px;
+  margin: 0;
+}
+
+.footer-bottom-bar a {
+  color: #ffc000; /* Yellow */
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+
+/* Large Tablets */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 30px;
+    margin: 0 auto; /* Ensure centering */
+  }
+
+  .footer-overlay {
+    width: 90%;
+    max-width: 800px; /* Slightly smaller max-width */
+  }
+
+  .footer-overlay h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .footer-overlay-buttons .contact-btn {
+    font-size: 18px;
+    padding: 12px 40px 12px 20px;
+  }
+
+  .footer-bottom-bar {
+    max-width: 800px; /* Match footer-overlay max-width */
+    padding: 12px 15px;
+  }
+
+  .footer-bottom-bar p {
+    font-size: 13px;
+  }
+}
+
+/* Tablets / Medium Screens */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Single column */
+    text-align: center; /* Center text for better appearance */
+    padding: 40px 20px;
+    margin: 0 auto; /* Ensure centering */
+  }
+
+  .footer-left,
+  .footer-links,
+  .footer-locations,
+  .footer-contact {
+    margin-bottom: 30px;
+  }
+
+  .footer-overlay {
+    width: 90%;
+    max-width: 600px; /* Adjust for smaller screens */
+    top: -100px;
+  }
+
+  .footer-overlay-content h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .footer-overlay-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-overlay-buttons .contact-btn {
+    padding: 12px 35px 12px 20px;
+    font-size: 18px;
+  }
+
+  .footer-overlay-buttons .about-link span {
+    font-size: 14px;
+  }
+
+  .footer-bottom-bar {
+    max-width: 600px; /* Match footer-overlay max-width */
+    padding: 12px 15px;
+  }
+
+  .footer-bottom-bar p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile / Small Screens */
+@media (max-width: 600px) {
+  .footer-section {
+    padding-top: 120px; /* Reduce padding for smaller screens */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr; /* Single column */
+    text-align: left; /* Align all content to left */
+    padding: 30px 15px;
+    margin-top: 150px; /* Push footer content below overlay */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer-left,
+  .footer-links,
+  .footer-locations,
+  .footer-contact {
+    margin-bottom: 25px;
+    text-align: left; /* Ensure left alignment */
+  }
+
+  .footer-left .footer-logo {
+    margin-top: 20px; /* Push logo down a bit */
+  }
+
+  .footer-overlay {
+    width: 95%;
+    max-width: 500px; /* Further adjust for small screens */
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .footer-overlay-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center; /* Keep overlay text centered */
+  }
+
+  .footer-overlay-buttons {
+    flex-direction: column;
+    align-items: center; /* Center buttons */
+    gap: 10px;
+  }
+
+  .footer-overlay-buttons .contact-btn {
+    padding: 10px 30px 10px 20px;
+    font-size: 16px;
+  }
+
+  .footer-overlay-buttons .about-link span {
+    font-size: 14px;
+  }
+
+  .footer-bottom-bar {
+    max-width: 500px; /* Match footer-overlay max-width */
+    padding: 10px 10px;
+  }
+
+  .footer-bottom-bar p {
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Screens */
+@media (max-width: 480px) {
+  .footer-bottom-bar {
+    max-width: 100%; /* Full width but constrained by padding */
+    padding: 10px 10px;
+  }
+
+  .footer-bottom-bar p {
+    font-size: 12px;
+  }
+}
+.footer-link {
+  text-decoration: none; /* remove underline */
+  color: inherit;        /* keep the text color */
+}
+
+.footer-link:hover {
+  text-decoration: none; /* optional: prevent underline on hover */
+}
+.link-no-style {
+  text-decoration: none; /* remove underline */
+  color: inherit;        /* keep button color */
+}

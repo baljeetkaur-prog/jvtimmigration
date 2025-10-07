@@ -1,0 +1,218 @@
+/* Container section */
+.cs-counter-section {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+/* Inner container */
+.cs-counter-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* <-- make children stretch to equal height */
+  overflow: hidden;
+}
+
+/* Left side with counters */
+.cs-counter-left {
+  flex: 2;
+  display: flex;
+  gap: 50px;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* Individual counter item */
+/* Individual counter item */
+.cs-counter-item {
+  display: flex;
+  flex-direction: column; /* top: icon+number, bottom: text */
+  align-items: flex-start; /* align to left inside the border */
+  text-align: left;
+  position: relative; /* needed for pseudo-element */
+  padding-left: 20px; /* space for the vertical border */
+  padding-right: 20px;
+  color: #fff;
+}
+
+/* Add vertical border before each counter (including first) */
+.cs-counter-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5%;
+  bottom: 5%;
+  width: 3px;
+  background-color: #333;
+}
+.cs-counter-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5%;
+  width: 3px;
+  height: 20px; /* small segment */
+  background-color: #ffc000;
+  transition: top 0.3s ease; /* animate moving down */
+}
+
+/* Move yellow segment down on hover */
+.cs-counter-item:hover::after {
+  top: 20%; /* adjust as needed for visual effect */
+}
+
+/* Top row: icon + number */
+.cs-counter-top {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and number */
+}
+
+/* Icon inside counter */
+.cs-counter-icon {
+  font-size: 40px;
+  color: #ffc000; /* yellow icon */
+  width: 40px;
+  height: 40px;
+}
+.cs-counter-number-wrapper {
+  display: inline-block;
+  min-width: 90px; /* adjust to largest number+suffix */
+  text-align: left; /* keeps numbers aligned */
+}
+.cs-counter-value {
+  display: inline-block;
+  width: 50%; /* ensures layout doesn’t shift */
+}
+/* Number in counter */
+.cs-counter-number {
+  font-size: 35px;
+  font-weight: 700;
+  margin: 0;
+  color: #fff;
+}
+.cs-counter-suffix-percent {
+  margin-left: 15px; /* more space for % */
+}
+
+.cs-counter-suffix-plus {
+  margin-left: 5px; /* less space for + */
+}
+
+/* Counter description text */
+.cs-counter-text {
+  font-size: 17px;
+  margin-top: 5px;
+color: #e5e5e5; 
+}
+/* Right side with contact info */
+/* Right side with contact info */
+.cs-counter-right {
+  flex: 1;
+  background-color: #ffc000;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+/* Top row: icon + text */
+.cs-counter-right-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Phone icon with white rectangle */
+.cs-counter-right-icon {
+  font-size: 30px;
+  color: #000; /* icon in black */
+  background-color: #fff; /* rectangle background */
+  padding: 10px;
+}
+
+/* Call for Help text next to icon */
+.cs-counter-right-text {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+/* Phone number centered below */
+.cs-counter-right-number {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 0;
+  text-align: center;
+  color: #fff; 
+}
+/* Mobile and small screens */
+@media (max-width: 768px) {
+  .cs-counter-container {
+    flex-direction: column; /* stack left and right */
+    gap: 0; /* remove spacing between boxes */
+    align-items: stretch; /* make boxes full width of container */
+  }
+
+  .cs-counter-left,
+  .cs-counter-right {
+    width: 100%; /* full width of container */
+    flex: unset; /* remove horizontal flex scaling */
+    padding: 15px; /* keep some padding all around */
+  }
+
+  /* Counters in left box in vertical order */
+  .cs-counter-left {
+    flex-direction: column; /* vertical stack */
+    gap: 15px;
+    align-items: center; /* center counters horizontally */
+  }
+
+  .cs-counter-item {
+    flex-direction: column; /* vertical layout for icon + number + text */
+    align-items: center;
+    text-align: center;
+    padding-left: 20px; /* maintain space from border like desktop */
+    padding-right: 20px;
+  }
+
+  .cs-counter-icon {
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .cs-counter-number {
+    font-size: 28px;
+  }
+
+  .cs-counter-text {
+    font-size: 14px;
+  }
+
+  /* Right box adjustments */
+  .cs-counter-right {
+    padding: 15px; /* maintain some padding */
+  }
+
+  .cs-counter-right-icon {
+    font-size: 28px;
+    padding: 8px;
+  }
+
+  .cs-counter-right-text {
+    font-size: 20px;
+  }
+
+  .cs-counter-right-number {
+    font-size: 16px;
+  }
+}

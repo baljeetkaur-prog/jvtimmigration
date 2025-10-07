@@ -1,0 +1,600 @@
+  .australia-grid-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two columns initially */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .australia-left {
+    grid-column: 1 / 2;
+  }
+
+  .australia-left h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .australia-left p {
+    margin: 0 0 10px 0;
+    line-height: 1.7;
+  }
+
+  .australia-right {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .australia-right img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Full-width content spans both columns */
+  .australia-fullwidth {
+    grid-column: 1 / 3;
+    margin-top: -110px;
+  }
+
+  .australia-fullwidth h3 {
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .australia-fullwidth p {
+    margin: 0 0 10px 0;
+    line-height: 1.7;
+  }
+  .australia-subsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* two equal columns */
+    gap: 40px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box; /* include padding in width */
+  }
+
+  .australia-sub-left,
+  .australia-sub-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .australia-sub-left h3,
+  .australia-sub-right h3 {
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    padding-bottom: 5px;
+    display: inline-block; /* makes width shrink to content */
+  }
+  .australia-sub-left h3,
+  .australia-sub-right h3 {
+    font-weight: 600;
+    margin: 0 0 10px 0;
+    position: relative;
+    padding-bottom: 15px;
+  }
+
+  .australia-sub-left h3::after,
+  .australia-sub-right h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 70px;       /* set fixed width of border */
+    height: 3px;
+    background-color: #ffc000;
+  }
+.australia-sub-left img,
+.australia-sub-right img {
+    width: 100%;        /* take full width of container */
+    max-width: 100%;    /* never exceed container */
+    height: auto;       /* maintain aspect ratio */
+    display: block;
+    margin-bottom: 10px;
+}
+
+  .australia-sub-left ul,
+  .australia-sub-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .australia-sub-left ul li {
+    position: relative;
+    margin-bottom: 8px;
+    padding-left: 15px;
+    font-size: 17px; 
+    color: #000;
+  }
+
+  .australia-sub-left ul li::before {
+    content: "•";
+    color: #ffc000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+  }
+
+  .australia-sub-right ul li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 17px; 
+    margin-bottom: 8px;
+    color: #000;
+  }
+
+  .australia-sub-right ul li svg {
+    color: #ffc000;
+  }
+
+  /* Responsive: stack columns on small screens */
+  @media (max-width: 768px) {
+    .australia-subsection {
+      grid-template-columns: 1fr; /* stack columns */
+    }
+  }
+  .australia-experience-section {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .australia-experience-left {
+    flex: 1;
+  }
+
+  .australia-experience-left h2 {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .experience-item {
+    margin-bottom: 15px;
+  }
+
+  .experience-item h3 {
+    font-weight: 600;
+    margin-bottom: 6px;
+    padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
+  }
+
+  .experience-item p {
+    margin: 0;
+    line-height: 1.7;
+  }
+  .australia-why-section {
+    max-width: 1200px;
+    margin: 10px auto;
+    padding: 0 20px;
+  }
+
+  .australia-why-section h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; /* vertically centers the line with text */
+    gap: 10px; /* space between line and text */
+  }
+
+  .australia-why-section h2::before {
+    content: "";
+    display: inline-block;
+    width: 40px;      /* length of the line */
+    height: 3px;      /* thickness */
+    background-color: #ffc000;
+  }
+
+  .why-points p {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+  }
+
+  .arrow-icon {
+    color: #000;
+    margin-top: 3px; /* align with text */
+  }
+
+  .why-description {
+    margin-top: 20px;
+    line-height: 1.7;
+  }
+  .australia-page{
+      margin-bottom: 200px; 
+  }
+  /* FAQ Section */
+  .custom-faqs ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  .custom-faq-item {
+    margin-bottom: 10px;
+  }
+
+  .custom-faq-question {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 700;
+    padding: 10px 0;
+    color: #111;
+    gap: 10px;
+  }
+
+  .custom-faq-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 20px;
+  }
+
+  .custom-faq-item.open .custom-faq-icon {
+    transform: rotate(180deg);
+    color: #ffc000;
+  }
+
+  .custom-faq-question.open span {
+    color: #ffc000;
+  }
+
+  .custom-faq-answer {
+    padding: 10px 0;
+    font-weight: 400;
+    color: #555;
+  }
+
+  .custom-faq-divider {
+    border-bottom: 1px solid #ccc;
+    opacity: 0.5;
+  }
+
+  /* Bottom Border */
+  .custom-bottom-border {
+    border-bottom: 2px solid #ccc;
+    margin: 40px 0;
+  }
+
+  /* Service Locations Section */
+  .custom-service-locations-container {
+    text-align: center;
+    margin: 40px 0;
+    position: relative;
+  }
+
+  .custom-service-locations-container h2 {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+  }
+
+  .custom-service-locations-container h2::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #ffc000;
+  }
+
+  .custom-service-locations {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+.custom-service-locations > div {
+    flex: 1 1 120px; /* allow shrinking and growing, base width 120px */
+    padding: 6px 12px; /* smaller vertical padding */
+    font-size: 16px; /* slightly smaller font on small screens */
+    text-align: center;
+    background-color: #ffc000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.custom-service-locations > div h3 {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+  .custom-service-locations > div:hover {
+    color: #fff; 
+    background-color: #000;
+  }
+
+  /* Responsive */
+  @media (max-width: 992px) {
+    .custom-service-locations,
+    .flex-row {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  /* Second Section Styling */
+  .custom-second-section h3{
+    color: #000; 
+    font-size: 20px; 
+  }
+
+  .custom-second-section p {
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+  }
+
+  .custom-faq-icon.open {
+    transform: rotate(180deg);
+    color: #ffc000;
+  }
+
+  /* Remove bottom border at the end of FAQ section */
+  .custom-bottom-border {
+    display: none; /* hides the bottom border after FAQ section */
+  }
+
+  .faqhead::before {
+    content: none !important; /* removes the pseudo-element */
+  }
+  /* Australia Left Section */
+  .australia-left h2 {
+      font-size: 32px; /* match Ludhiana h2 */
+  }
+
+  .australia-left p {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  /* Fullwidth h3 and p */
+  .australia-fullwidth h3 {
+      font-size: 20px; /* match Ludhiana h3 */
+  }
+
+  .australia-fullwidth p {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  /* Subsection h3 and list items */
+  .australia-sub-left h3,
+  .australia-sub-right h3 {
+      font-size: 20px; /* match Ludhiana h3 */
+  }
+
+  .australia-sub-left ul li,
+  .australia-sub-right ul li {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  /* Experience Section */
+  .australia-experience-left h2 {
+      font-size: 32px; /* match Ludhiana h2 */
+  }
+
+  .experience-item h3 {
+      font-size: 20px; /* match Ludhiana h3 */
+  }
+
+  .experience-item p {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  /* Why Section */
+  .australia-why-section h2 {
+      font-size: 32px; /* match Ludhiana h2 */
+  }
+
+  .why-points p,
+  .why-description {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  /* FAQ Section */
+  .custom-faqs h2.faqhead {
+      font-size: 32px; /* match Ludhiana h2 */
+  }
+
+  .custom-faq-question {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  .custom-faq-answer {
+      font-size: 16px; /* match Ludhiana p */
+  }
+
+  /* Service Locations */
+  .custom-service-locations-container h2 {
+      font-size: 20px; /* match Ludhiana h2 */
+  }
+
+  .custom-service-locations > div {
+      font-size: 19px; /* match Ludhiana tick items */
+  }
+
+  .custom-service-locations > div h3 {
+      font-size: 20px; /* match Ludhiana h3 */
+  }
+
+  /* Second Section */
+  .custom-second-section h3 {
+      font-size: 20px; /* match Ludhiana h3 */
+  }
+
+  .custom-second-section p {
+      font-size: 16px; /* match Ludhiana p */
+  }
+  .australia-left p,
+  .australia-fullwidth p,
+  .australia-sub-left ul li,
+  .australia-sub-right ul li,
+  .experience-item p,
+  .why-points p,
+  .why-description,
+  .custom-faq-question,
+  .custom-faq-answer,
+  .custom-second-section p {
+      color: #333; /* font color black */
+  }
+  .section p,
+  .intro-text,
+  .intro-text p,
+  .experience-item p,
+  .why-points p,
+  .why-description,
+  .second-section p,
+  .australia-left p,
+  .australia-fullwidth p,
+  .australia-sub-left ul li,
+  .australia-sub-right ul li,
+  .faq-answer {
+      font-size: 16px;      /* unified font size */
+      line-height: 1.7;     /* unified line height */
+      font-weight: 400;     /* unified normal weight for paragraphs/lists */
+      color: #333;          /* font color black */
+  }
+
+  .australia-left h2,
+  .australia-experience-left h2,
+  .australia-why-section h2,
+  .custom-faqs h2.faqhead {
+      font-weight: 700;     /* unified bold for main headings */
+  }
+
+  .australia-fullwidth h3,
+  .australia-sub-left h3,
+  .australia-sub-right h3,
+  .experience-item h3,
+  .custom-service-locations > div h3,
+  .custom-service-locations > div,
+  .custom-faq-question {
+      font-weight: 600;     /* unified semi-bold for subheadings and important items */
+  }
+  @media (max-width: 768px) {
+    .australia-grid-section {
+      display: flex;
+      flex-direction: column; /* stack content */
+      gap: 20px;
+      margin: 20px auto;
+    }
+
+    .australia-left,
+    .australia-right,
+    .australia-fullwidth {
+      grid-column: unset; /* reset grid columns */
+      width: 100%;
+    }
+
+    .australia-right img {
+      margin-top: 10px;
+    }
+
+    .australia-fullwidth {
+      margin-top: 20px;
+    }
+  }
+  @media (max-width: 768px) {
+    .australia-subsection {
+      grid-template-columns: 1fr; /* single column */
+      gap: 20px;
+    }
+
+    .australia-sub-left img,
+    .australia-sub-right img {
+      max-width: 100%; /* make images full width */
+    }
+  }
+  @media (max-width: 768px) {
+    .australia-experience-section {
+      flex-direction: column;
+      gap: 20px;
+      margin: 20px auto;
+    }
+  }
+  @media (max-width: 768px) {
+    .why-points p {
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .custom-faqs ul {
+      padding: 0;
+      margin: 10px 0;
+    }
+  }
+  @media (max-width: 480px) {
+    .australia-left h2,
+    .australia-experience-left h2,
+    .australia-why-section h2,
+    .custom-faqs h2.faqhead {
+      font-size: 28px;
+    }
+
+    .australia-left p,
+    .australia-fullwidth p,
+    .australia-sub-left ul li,
+    .australia-sub-right ul li,
+    .experience-item p,
+    .why-points p,
+    .why-description,
+    .custom-faq-question,
+    .custom-faq-answer {
+      font-size: 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    .australia-sub-left img,
+    .australia-sub-right img {
+        margin: 0 auto 10px; /* center image */
+    }
+}
+/* Remove border for Service Locations on small screens */
+@media (max-width: 768px) {
+  .custom-service-locations-container h2::before {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+    .custom-service-locations {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    .custom-service-locations > div {
+        flex: 1 1 45%; /* 2 buttons per row */
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .custom-service-locations > div {
+        flex: 1 1 100%; /* stack buttons */
+        padding: 4px 8px;
+        font-size: 14px;
+    }
+}
+
+
+

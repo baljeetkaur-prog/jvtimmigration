@@ -1,0 +1,256 @@
+/* -------------------- Page Container -------------------- */
+.cnmoh-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 150px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* -------------------- Intro Section -------------------- */
+.cnmoh-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.cnmoh-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.cnmoh-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.cnmoh-text p {
+  color: #333;
+  line-height: 1.8;
+}
+
+.cnmoh-text ul {
+  list-style-type: disc;
+  color: #333;
+  line-height: 1.7;
+}
+
+.cnmoh-text ul li {
+  margin-bottom: 10px;
+}
+
+.cnmoh-image {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.cnmoh-image img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------- Sections -------------------- */
+.cnmoh-section {
+  margin-top: 10px;
+}
+
+.cnmoh-section h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.cnmoh-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.cnmoh-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.cnmoh-section ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  flex-wrap: nowrap; /* prevent icon/heading from splitting */
+}
+.canadatick-icon {
+  color: #ffc000;
+  font-size: 18px;
+  margin-top: 4px;
+}
+
+/* -------------------- Map Section -------------------- */
+.cnmoh-map {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.cnmoh-map iframe {
+  width: 100%;
+  max-width: 1200px;
+  height: 450px;
+  border: 0;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media (max-width: 992px) {
+  .cnmoh-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .cnmoh-text,
+  .cnmoh-image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cnmoh-text h2 {
+    font-size: 28px;
+  }
+
+  .cnmoh-text p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cnmoh-text h2 {
+    font-size: 26px;
+  }
+
+  .cnmoh-text p,
+  .cnmoh-section p {
+    font-size: 14px;
+  }
+
+  .cnmoh-section h2 {
+    font-size: 26px;
+  }
+
+  .cnmoh-section ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cnmoh-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .cnmoh-text,
+  .cnmoh-image {
+    width: 100%;
+    text-align: left;
+  }
+
+  .cnmoh-text h2 {
+    font-size: 24px;
+  }
+
+  .cnmoh-text p {
+    font-size: 13px;
+  }
+
+  .cnmoh-section h2 {
+    font-size: 24px;
+  }
+
+  .cnmoh-section p {
+    font-size: 13px;
+  }
+
+  .cnmoh-section ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cnmoh-text h2 {
+    font-size: 20px;
+  }
+
+  .cnmoh-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .cnmoh-section h2 {
+    font-size: 20px;
+  }
+
+  .cnmoh-section p,
+  .cnmoh-section ul li {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .cnmoh-map iframe {
+    height: 350px;
+  }
+}
+.cnmoh-tick {
+  color: #ffc000;
+  margin-top: 4px;
+  flex-shrink: 0; /* prevent icon from shrinking */
+  font-size: 18px;
+}
+.cnmoh-section ul li span {
+  display: inline-block; /* keep heading + text together */
+}
+/* Default font for cnmoh-text ul li */
+.cnmoh-text ul li {
+  margin-bottom: 10px;
+  font-size: 16px; /* match default paragraph */
+  line-height: 1.7;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .cnmoh-text ul li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cnmoh-text ul li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cnmoh-text ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cnmoh-text ul li {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+

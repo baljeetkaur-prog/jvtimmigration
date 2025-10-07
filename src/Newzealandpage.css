@@ -1,0 +1,199 @@
+/* Container */
+.nz-container {
+  max-width: 1200px;
+  margin: 10px auto; /* reduced gap between sections */
+  padding: 0 20px;
+}
+.newzealand-page{
+    margin-top: 60px; 
+    margin-bottom: 170px; 
+}
+
+/* Grid for first section */
+.nz-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.nz-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.nz-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.nz-points {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  color: #333; 
+}
+
+.nz-points li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 15px;
+  color: #333;
+}
+
+.nz-points li::before {
+  content: "•";
+  color: #ffc000;
+  position: absolute;
+  left: 0;
+}
+
+/* Right side image */
+.nz-right img {
+  width: 100%;
+}
+
+/* Section heading with border */
+.nz-section-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.nz-section-heading.why-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 130px;  /* small yellow line */
+  height: 2px;
+  background-color: #ffc000;
+}
+
+/* Subgrid for Why Study section */
+.nz-subgrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.nz-sub-left img {
+  width: 100%;
+}
+
+.nz-sub-right p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333; 
+}
+
+.nz-arrow-points {
+  list-style: none;
+  padding: 0;
+}
+
+.nz-arrow-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.nz-arrow-points li svg {
+  color: #000;
+  margin-top: 3px;
+  font-size: 25px; 
+}
+
+/* Tick Points */
+.nz-tick-points {
+  list-style: none;
+  padding: 0;
+}
+
+.nz-tick-points li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.nz-tick-points li svg {
+  color: #ffc000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nz-grid,
+  .nz-subgrid {
+    grid-template-columns: 1fr;
+  }
+}
+.nz-bullet-points {
+  list-style: disc;   /* standard bullet */
+  padding-left: 20px; /* indent bullets */
+  margin-top: 10px;
+}
+
+.nz-bullet-points li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #333;
+}
+.nz-bullet-points {
+  list-style: disc;   /* standard disc bullets */
+  padding-left: 20px; /* indent bullets */
+  margin-top: 10px;
+  color: #333;        /* text color */
+}
+
+.nz-bullet-points li {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 8px;
+  color: #333;
+  list-style: disc;   /* enforce standard bullet */
+}
+
+.nz-bullet-points li::before {
+  content: none;      /* remove any pseudo-elements */
+}
+.custom-faq-question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  gap: 8px;
+  margin-bottom: 4px; /* small space before answer */
+}
+
+.custom-faq-answer {
+  display: block;       /* ensures it appears below question */
+  margin-left: 28px;    /* indent slightly so it's visually under question */
+  margin-top: 4px;
+   line-height: 1.7;  
+  color: #333;
+  font-weight: normal;
+}
+
+.custom-faq-divider {
+  height: 1px;
+  background-color: #e0e0e0;
+  margin: 8px 0;
+}
+

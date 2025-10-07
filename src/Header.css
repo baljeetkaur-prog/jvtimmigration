@@ -1,0 +1,1128 @@
+/* Shared container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* General header styles */
+.header {
+  width: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Top bar */
+.top-bar {
+  background-color: #383838;
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 0;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highlight {
+  color: #ffc000;
+  font-weight: 600;
+}
+
+/* Social icons */
+.icon-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  color: #ffc000;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 10px;
+  font-size: 14px;
+  transition: all 0.3s ease-in-out;
+}
+
+.icon-circle:hover {
+  background: #ffc000;
+  color: #fff;
+}
+
+/* Middle bar */
+.middle-bar {
+  background: #fff;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.middle-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-height: 70px;
+}
+
+.contact-info {
+  display: flex;
+  gap: 40px; /* spacing between items */
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 250px;
+  position: relative;
+  padding-bottom: 10px; /* spacing at bottom */
+}
+.contact-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -20px; /* adjust space between items */
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #ccc; /* grey divider */
+}
+
+
+.contact-icon {
+  color: #ffc000;
+  font-size: 33px;
+  flex-shrink: 0;
+}
+
+.contact-label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+  display: block;
+  margin-bottom: 5px; /* space between label and value */
+}
+
+.contact-value {
+  font-size: 15px;
+  color: #555;
+  display: block;
+}
+
+.contact-sub {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Nav bar itself */
+.nav-bar {
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+  width: calc(1200px + 40px);
+  box-sizing: border-box;
+  position: relative; /* ensure it's positioned for z-index */
+  z-index: 10;        /* navbar above carousel */
+}
+/* Container inside nav-bar */
+.nav-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+
+/* Black nav links wrapper */
+.nav-links-wrapper {
+  background-color: #000;
+  display: flex;
+  padding-left: 70px; 
+  padding-right: 250px;
+}
+
+/* Navigation links */
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  position: relative;
+  display: block;
+  padding: 25px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px; 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffc000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+
+
+.nav-list li a:hover {
+  color: #ffc000;
+}
+
+.nav-list li a:hover::after {
+  transform: scaleX(1);
+}
+/* Appointment button wrapper */
+.appointment-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 0; /* black nav ends at divider */
+}
+
+/* Thin divider */
+.divider {
+  width: 1px;
+  height: 40px;
+  background-color: transparent; 
+  margin: 0 5px;
+}
+
+/* Appointment button */
+.appointment-btn {
+  background: #ffc000;
+  color: #fff;
+  padding: 25px 35px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.appointment-btn:hover {
+  background: #000; 
+}
+
+
+
+/* Responsive */
+@media (max-width: 992px) {
+  .middle-flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .contact-info {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .appointment-btn {
+    margin-top: 10px;
+  }
+}
+/* Hamburger menu icon */
+
+
+@media (max-width: 992px) {
+  .desktop-nav,
+  .desktop-contact,
+  .desktop-icons {
+    display: none;
+  }
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  .middle-flex {
+    justify-content: space-between;
+  }
+
+  /* Mobile Sidebar */
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 280px;
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+.mobile-sidebar.open {
+  left: 0; /* slide in from left */
+}
+.mobile-sidebar {
+  left: auto !important;
+}
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .sidebar-logo {
+    max-height: 60px;
+  }
+
+  .close-icon {
+    cursor: pointer;
+    color: #ffc000;
+  }
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 0; /* prevent stretching */
+}
+
+/* Nav items */
+.sidebar-nav li {
+  margin: 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.sidebar-nav li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 0; /* reduce vertical padding */
+  display: block;
+}
+
+  .sidebar-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: auto;
+  }
+
+  .sidebar-appointment {
+    display: block;
+    text-align: center;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .overlay.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 998;
+  }
+}
+/* Hide sidebar & overlay by default on desktop */
+.mobile-sidebar,
+.overlay {
+  display: none;
+}
+
+@media (max-width: 992px) {
+  /* Show sidebar when open */
+  .mobile-sidebar {
+    display: flex;
+  }
+
+  .overlay.show {
+    display: block;
+  }
+
+  /* Hide desktop nav and contact on small screens */
+  .desktop-nav,
+  .desktop-contact,
+  .desktop-icons {
+    display: none;
+  }
+
+  /* Show hamburger menu */
+
+}
+@media (max-width: 992px) {
+  .middle-flex {
+    justify-content: space-between; /* logo left, hamburger right */
+  }
+}
+@media (max-width: 992px) {
+  /* Mobile Sidebar */
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: #fff; /* white */
+    color: #000;
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .mobile-sidebar.open {
+    right: 0;
+  }
+
+  .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px; /* compact spacing */
+  }
+
+  .sidebar-logo {
+    max-height: 60px;
+  }
+
+  .close-icon {
+    cursor: pointer;
+    color: #000; 
+  }
+
+  /* Nav Links */
+  .sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .sidebar-nav li {
+    margin: 0;
+    border-bottom: 1px solid #ccc; /* thin grey border */
+  }
+
+  .sidebar-nav li a {
+    color: #000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 12px 0;
+    display: block;
+  }
+
+  /* Contact info immediately after nav links */
+  .sidebar-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;          /* small spacing between items */
+  margin-top: 30px;   /* move it a bit lower from nav links */
+  font-size: 14px;
+}
+
+/* Remove dividers from contact items */
+.sidebar-contact .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;            /* spacing between icon and text */
+  font-size: 16px;      /* slightly bigger text */
+  color: #000;          /* default text color */
+}
+
+.sidebar-contact .contact-item .contact-icon {
+  color: #ffc000;       /* gold icons */
+  font-size: 28px;      /* bigger icons */
+  flex-shrink: 0;
+}
+
+/* Sidebar text */
+.sidebar-contact .contact-item span {
+  font-weight: 600;
+  color: #000;          /* black text */
+}
+
+/* Optional: adjust spacing of multiple lines */
+.sidebar-contact .contact-item div {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.sidebar-contact .contact-item::after {
+  content: none;      /* remove divider lines */
+}
+
+/* Appointment button centered below contact */
+.sidebar-appointment {
+  display: block;
+  margin: 0px auto 0; /* centered horizontally */
+  text-align: center;
+  background: #ffc000;
+  color: #fff;
+  padding: 12px 0;
+  font-weight: 600;
+  text-decoration: none;
+  width: 80%; /* reasonable width */
+}
+  /* Overlay */
+  .overlay.show {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    z-index: 998;
+  }
+}
+@media (max-width: 768px) {
+  .logo img {
+    max-height: 45px;   /* smaller logo */
+    margin-bottom: 60px; /* space below logo */
+  }
+}
+@media (max-width: 480px) {
+  .logo img {
+    max-height: 35px;
+    margin-bottom: 50px;
+  }
+}
+/* Sticky Bottom Header */
+.sticky-bottom-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; 
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  z-index: 1500;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center; /* center the container */
+}
+
+.sticky-bottom-header.show {
+  transform: translateY(0);
+}
+
+.sticky-bottom-header.hide {
+  transform: translateY(-100%);
+}
+
+/* Inner container 1200px */
+.sticky-nav-container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* logo left, nav center, button right */
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+/* Logo on left */
+.sticky-logo img {
+  max-height: 60px;
+  display: block;
+}
+
+/* Navigation */
+.sticky-nav-links ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-nav-links li a {
+  text-decoration: none;
+  color: #000;
+  line-height: 80px; 
+  font-weight: 600;
+  height: 100%; 
+  display: flex;
+  align-items: center; /* vertically center text */
+  padding: 0 10px; /* horizontal padding only */
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.sticky-nav-links li a:hover {
+  color: #ffc000;
+}
+
+/* Appointment button on right */
+.sticky-appointment-wrapper .appointment-btn {
+  height: 100%;          /* fill the sticky navbar height */
+  display: flex;
+  align-items: center;   /* vertically center text */
+  justify-content: center; /* horizontally center text */
+  padding: 30px 30px;       /* only horizontal padding */
+  border-radius: 0;      /* optional: remove rounding */
+}
+
+.sticky-appointment-wrapper .appointment-btn:hover {
+  background: #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .sticky-nav-links ul {
+    gap: 15px;
+    font-size: 14px;
+  }
+  .sticky-logo img {
+    max-height: 50px;
+  }
+  .sticky-appointment-wrapper .appointment-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
+/* Dropdown Container */
+.nav-list .dropdown {
+  position: relative; /* parent relative for absolute dropdown */
+}
+
+.nav-list .dropdown span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 25px 0; /* match navbar height */
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* appear just below Study Abroad + */
+  left: 0;
+  background: #fff;
+  border-radius: 0 0 5px 5px; /* rounded only at bottom corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* shadow still okay */
+  padding: 10px 0;
+  list-style: none;
+  display: none; /* hidden by default */
+  width: 300px; /* fixed width */
+  flex-direction: column; /* vertical layout */
+  border-top: none; /* explicitly no top border */
+  z-index: 999;
+}
+
+/* Dropdown items */
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.dropdown-menu li a:hover {
+  color: #ffc000;
+}
+
+/* Show dropdown only on hover */
+.nav-list .dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+/* Apply underline only to top-level nav links (exclude dropdown links) */
+/* Only top-level nav links (exclude dropdown menu items) */
+.nav-list > li > a {
+  position: relative;
+}
+
+.nav-list > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffc000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Show underline only on hover for top-level links */
+.nav-list > li > a:hover {
+  color: #ffc000;
+}
+
+.nav-list > li > a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Ensure dropdown menu links have NO underline */
+.dropdown-menu li a::after {
+  content: none;
+}
+.nav-list .dropdown span {
+  position: relative; /* for underline positioning */
+}
+
+.nav-list .dropdown span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffc000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Show underline on hover */
+.nav-list .dropdown:hover span::after {
+  transform: scaleX(1);
+}
+/* Sticky Nav Links - make black by default */
+.sticky-nav-links li a {
+  color: #000;               /* default black */
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  position: relative;        /* needed for underline animation */
+  transition: color 0.3s ease;
+}
+
+/* Hover color */
+.sticky-nav-links li a:hover {
+  color: #ffc000;
+}
+
+/* Underline animation */
+.sticky-nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* stick to bottom of navbar */
+  width: 100%;
+  height: 4px; /* thickness of underline */
+  background-color: #ffc000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.sticky-nav-links li {
+  position: relative;
+}
+
+/* On hover, expand underline */
+.sticky-nav-links li a:hover::after {
+  transform: scaleX(1);
+}
+.sticky-nav-links {
+  position: relative; /* relative to navbar */
+}
+
+.sticky-nav-links li {
+  position: relative; /* so ::after is positioned relative to navbar bottom */
+}
+.sticky-nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0; /* stick to bottom of sticky navbar */
+  width: 100%;
+  height: 4px; /* thickness of underline */
+  background-color: #ffc000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.sticky-nav-links li a {
+  display: inline-block;
+  padding: 0; /* remove vertical padding */
+  line-height: 80px; /* make link full height of navbar */
+  height: 100%;
+}
+.sticky-nav-links .dropdown span {
+  padding: 0 10px;      /* horizontal spacing */
+  height: 80px;          /* same as sticky navbar link height */
+  line-height: 80px;     /* vertically center text */
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;    /* for underline */
+}
+
+/* ---------------- Sticky Navbar Dropdown ---------------- */
+.sticky-nav-links li.dropdown {
+  position: relative; /* parent relative for absolute dropdown */
+  cursor: pointer;
+}
+
+/* Dropdown text */
+.sticky-nav-links li.dropdown span {
+  display: inline-block;
+  padding: 0 10px;
+  height: 80px;
+  line-height: 80px; /* vertical center */
+  font-weight: 600;
+  font-size: 16px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline for sticky dropdown top-level */
+.sticky-nav-links li.dropdown span::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #ffc000;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+
+/* Show underline on hover */
+.sticky-nav-links li.dropdown:hover span::after {
+  transform: scaleX(1);
+}
+
+/* Dropdown menu */
+.sticky-nav-links li.dropdown .dropdown-menu {
+    display: none;                /* hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    width: 300px;                 /* fixed width */
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    padding: 20px 5px;              /* padding top & bottom of menu */
+    list-style: none;
+    flex-direction: column;
+    z-index: 1500;
+}
+
+
+/* Dropdown items */
+.sticky-nav-links li.dropdown .dropdown-menu li a {
+  display: block;
+  padding: 0px 20px;
+  color: #333;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s, background 0.3s;
+}
+
+.sticky-nav-links li.dropdown .dropdown-menu li a:hover {
+  color: #ffc000;
+}
+
+/* Show dropdown on hover */
+.sticky-nav-links li.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 992px) {
+  .sticky-nav-links li.dropdown .dropdown-menu {
+    width: 250px;
+  }
+
+  .sticky-nav-links li.dropdown .dropdown-menu li a {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+.sticky-nav-links li.dropdown .dropdown-menu li a {
+    padding: 0px 20px;    /* compact vertical padding */
+    line-height: normal;  /* prevents inherited 80px line height */
+    display: block;
+}
+.sticky-nav-links li.dropdown .dropdown-menu li a::after {
+    content: none;   /* remove pseudo-element */
+}
+
+/* Only change text color on hover */
+.sticky-nav-links li.dropdown .dropdown-menu li a:hover {
+    color: #ffc000;
+}
+@media (max-width: 992px) {
+
+  .sticky-bottom-header {
+    display: none !important;
+  }
+}
+/* ---------------- Mobile Styles ---------------- */
+
+  @media (max-width: 992px) {
+  .top-bar {
+    display: none;
+  }
+  /* Middle bar layout: logo left, hamburger right */
+  .middle-flex {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  /* Hamburger icon styling */
+
+  /* Hide desktop nav & contact info */
+  .desktop-nav,
+  .desktop-contact,
+  .desktop-icons {
+    display: none !important;
+  }
+}
+/* Hamburger icon for mobile */
+@media (max-width: 992px) {
+  .middle-flex {
+    justify-content: space-between; /* logo left, icon right */
+    align-items: center;           /* vertical center */
+    position: relative;
+    padding: 0 10px;               /* optional spacing */
+    height: 100px; 
+  }
+
+  .mobile-menu-icon {
+    display: flex;
+    align-items: center;           /* vertical center */
+    justify-content: center;       /* center the icon itself */
+    cursor: pointer;
+    color: #000;                   /* white icon */
+    font-size: 5px;               /* adjust size */
+    width: 30px;                   /* square container */
+    height: 30px;                  /* square container */
+    border-radius: 50%;            /* make it circular */
+    transition: all 0.3s ease;
+    position: absolute;
+     right: 20px;                   /* distance from right edge */
+    top: 20%;
+    transform: translateY(-50%);   /* vertical centering */
+  }
+}
+/* Mobile Sidebar Dropdown */
+.sidebar-dropdown-toggle {
+  cursor: pointer;
+  font-weight: 600;
+  padding: 12px 0;
+  display: block;
+  color: #000;
+}
+
+.sidebar-dropdown-menu {
+  list-style: none;
+  padding-left: 15px;
+  margin: 5px 0 10px;
+}
+
+.sidebar-dropdown-menu li a {
+  display: block;
+  padding: 8px 0;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.sidebar-dropdown-menu li a:hover {
+  color: #ffc000;
+}
+.sidebar-dropdown-menu li {
+  border-bottom: none !important;
+}
+
+.mobile-menu-icon {
+  display: none; /* hidden by default */
+  cursor: pointer;
+}
+
+/* Show only on mobile screens */
+@media (max-width: 991px) {
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  /* Optional: hide desktop contact info on mobile */
+  .desktop-contact {
+    display: none;
+  }
+
+  /* Hide desktop nav on mobile */
+  .desktop-nav {
+    display: none;
+  }
+}
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: #fff;
+  color: #000;
+  z-index: 999;
+  transition: right 0.3s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+
+  /* Key part for scroll */
+  overflow-y: auto; 
+  -webkit-overflow-scrolling: touch; /* smooth scroll for iOS */
+
+  padding: 20px;
+}
+
+/* Make the nav take remaining space so it can scroll */
+.sidebar-header {
+  flex: 0 0 auto; /* header stays fixed at top */
+  margin-bottom: 15px;
+}
+
+.sidebar-nav {
+  flex: 1 1 auto;  /* take remaining height */
+  overflow-y: auto; /* scroll only the nav */
+}
+
+.mobile-sidebar .sidebar-contact {
+  margin-bottom: 10px; /* small spacing below contact info */
+}
+
+.mobile-sidebar .sidebar-appointment {
+  margin-bottom: 60px; /* no extra gap at bottom */
+}
+.mobile-sidebar,
+.mobile-sidebar .sidebar-nav {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+.mobile-sidebar::-webkit-scrollbar,
+.mobile-sidebar .sidebar-nav::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+@media (max-width: 992px) {
+
+  /* Sticky Middle-Flex (logo + hamburger) */
+  .middle-flex {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #fff;
+    z-index: 1500; /* below sidebar */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+
+  /* Push page content down so it's not hidden behind sticky header */
+  body {
+    padding-top: 100px; /* same as header height */
+  }
+
+  /* Mobile Sidebar */
+  .mobile-sidebar {
+    position: fixed;
+    top: 0; /* cover header */
+    right: -100%;
+    width: 280px;
+    height: 100vh; /* full viewport height */
+    background: #fff;
+    color: #000;
+    z-index: 1600; /* above sticky header */
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+  }
+   .mobile-menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;       /* reasonable icon size */
+    width: 35px;           /* square container */
+    height: 35px;          /* square container */
+    border-radius: 50%;
+    position: relative;     /* remove top/transform tricks */
+  }
+   .middle-flex .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;       /* reasonable icon size */
+    width: 35px;           /* square container */
+    height: 35px;          /* square container */
+    border-radius: 50%;
+    right: -50px;
+    top: 25px; 
+    position: relative;     /* remove top/transform tricks */
+  }
+
+  .mobile-sidebar.open {
+    right: 0;
+  }
+
+  /* Overlay to cover rest of page when sidebar open */
+  .overlay.show {
+    display: block;
+    position: fixed;
+    top: 0;  /* cover header as well */
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.3);
+    z-index: 1599; /* just below sidebar */
+  }
+}
+/* Active link underline (same as hover) */
+.nav-list li a.active-link::after,
+.nav-list > li > a.active-link::after,
+.nav-list .dropdown span.active-link::after {
+  transform: scaleX(1);
+}
+
+
+
+
+

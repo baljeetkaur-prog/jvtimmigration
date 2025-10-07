@@ -1,0 +1,281 @@
+.cs-countries-section {
+  width: 100%;
+  padding: 50px 20px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.cs-countries-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px; /* reduced from 30px */
+  box-sizing: border-box;
+}
+
+.cs-small-heading {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  padding-left: 55px; /* increased from 50px to add gap */
+  margin-bottom: 0; 
+  text-align: center;
+}
+
+.cs-small-heading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 40px; /* keep line length */
+  height: 5px;
+  background-color: #ffc000;
+}
+.cs-highlight {
+  color: #ffc000;
+}
+
+.cs-big-heading {
+  font-size: 49px;
+  font-weight: 700;
+  margin: 5px 0 5px 0;
+  text-align: center;
+}
+
+.cs-countries-description {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #333; 
+  max-width: 1200px;
+  margin-bottom: 20px; /* removed gap */
+}
+.cs-countries-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on desktop */
+  gap: 20px;
+  justify-content: center; /* centers the whole grid */
+  width: 100%;
+  max-width: 1100px; /* limits the overall grid width */
+  box-sizing: border-box;
+}
+.cs-country-card-wrapper {
+  position: relative; /* wrapper to hold card + hover shape */
+  display: inline-block;
+}
+
+
+.cs-country-card {
+  position: relative;
+  z-index: 2; /* card above hover shape */
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  max-width: 350px;
+  min-height: 500px;
+  margin: 0 auto;
+}
+.cs-country-card-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 27px;        /* offset from top */
+  right:18px;      /* offset from right */
+  width: calc(95% + 20px);   /* slightly bigger than card */
+  height: calc(95% + 20px);   /* slightly bigger than card */
+  background-color: #ffc000;  /* rectangle base color */
+  border-radius: 0 50% 50% 0; /* D-shape on right side only */
+  z-index: 1;                  /* behind card */
+  transform: scale(0);         /* hidden initially */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;                  /* hidden initially */
+}
+
+/* Show hover shape */
+.cs-country-card-wrapper:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.cs-card-left {
+  display: flex;
+  flex-direction: column; /* stack icon and content vertically */
+  align-items: flex-start; /* left align */
+  gap: 10px; /* reduced from 15px */
+}
+
+.cs-flag-round {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  margin-bottom: 10px; 
+}
+
+.cs-flag-round img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cs-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px; /* reduced from 10px */
+  width: 100%;
+}
+
+.cs-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cs-card-description {
+  font-size: 0.95rem;
+  line-height: 1.8; /* slightly tighter */
+  margin: 0;
+  color: #e0e0e0;
+}
+
+/* Move + icon below content, bottom-right aligned */
+.cs-card-right {
+  position: absolute; /* position absolute */
+  bottom: 20px;       /* distance from bottom */
+  right: 20px;        /* distance from right */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cs-plus-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #535353;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+}
+.cs-plus-round:hover {
+background-color: #ffc000; 
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .cs-card-left {
+    align-items: center; /* center on mobile */
+  }
+
+  .cs-card-right {
+    justify-content: center;
+    margin-top: 10px; /* match reduced spacing */
+  }
+}
+/* Tablets */
+@media (max-width: 992px) {
+  .cs-countries-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .cs-country-card {
+    min-height: 450px; /* slightly bigger */
+    max-width: 320px;
+    padding: 15px;
+  }
+
+  .cs-card-title {
+    font-size: 20px; /* smaller heading */
+  }
+
+  .cs-card-description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .cs-plus-round {
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cs-countries-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .cs-country-card {
+    min-height: 350px; /* slightly bigger than before */
+    max-width: 90%;
+    padding: 15px;
+    margin: 0 auto;
+  }
+
+  .cs-card-title {
+    font-size: 18px; /* smaller heading */
+    text-align: center;
+  }
+
+  .cs-card-description {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  .cs-flag-round {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cs-card-left {
+    align-items: center;
+    gap: 8px; /* slightly larger spacing */
+  }
+
+  .cs-card-right {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    margin-top: 10px;
+    justify-content: center;
+  }
+
+  .cs-plus-round {
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+  }
+
+  .cs-country-card-wrapper::before {
+    top: 10px;
+    right: 10px;
+    width: 100%;
+    height: 100%;
+  }
+}
+/* Remove default link styles for cards */
+.cs-country-card-wrapper {
+  text-decoration: none; /* no underline */
+  color: inherit;        /* inherit text color */
+  display: block;        /* make link a block element for full card click */
+}
+
+/* Optional: add hover effect */
+.cs-country-card-wrapper:hover .cs-country-card {
+ transition: transform 0.3s ease;
+}
+
+

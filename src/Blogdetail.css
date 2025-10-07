@@ -1,0 +1,646 @@
+.blog-detail-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  padding: 40px 20px;
+}
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* adds left-right padding */
+  padding-bottom: 150px; 
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+.blog-detail-section{
+    margin-bottom: 200px; 
+}
+
+.blog-detail-left {
+  flex: 3;
+  border: 1px solid #d3d3d3;
+  border-radius: 6px;
+  background-color: #fff;
+  overflow: visible; /* allow tags to be outside */
+  position: relative; /* for absolute positioning */
+  padding-bottom: 50px; /* space for tags outside */
+}
+.blog-tags-wrapper {
+  position: absolute;
+  bottom: -60px; /* outside the box */
+  left: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sidebar-tags .tags-heading {
+  font-weight: bold;
+  border-bottom: 3px solid #ffc000;
+  display: inline-block; /* only as wide as text */
+  padding-bottom: 5px;
+}
+
+/* Individual tags */
+.blog-tags-wrapper .tag {
+  display: inline-block;
+  background-color: #f0f0f0; /* light grey background */
+  color: #000;               /* black text */
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for tags */
+.blog-tags-wrapper .tag:hover {
+  background-color: #ffc000;
+  color: #fff;
+}
+.blog-content-wrapper {
+  padding: 10px 20px; /* reduce top padding to decrease space after main image */
+   text-align: center;
+}
+.blog-content h3,
+.blog-content p,
+.blog-content ul,
+.blog-tags {
+  display: inline-block; /* ensures they respect centering */
+  text-align: left; /* keeps multi-line text inside aligned nicely */
+  max-width: 800px; /* optional: limits width for readability */
+  width: 100%;
+}
+
+
+.blog-main-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px;
+  border-top-left-radius: 6px;  /* match container border radius */
+  border-top-right-radius: 6px;
+}
+.blog-detail-right {
+  flex: 1; /* right section remains smaller */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.blog-main-img {
+  width: 100%;
+  display: block;
+  margin-bottom: 2px; /* less space now */
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+
+.blog-center-img {
+  width: 80%;        /* reduce width from 100% to 80% */
+  max-width: 600px;  /* optional: limit maximum width */
+  height: auto;      /* maintain aspect ratio */
+  margin: 20px auto; /* vertical spacing + horizontal centering */
+  display: block;    /* ensures margin auto centers the image */
+  border-radius: 4px; /* optional: slightly rounded corners */
+}
+
+.blog-tags .tag {
+  display: inline-block;
+  background-color: #ffc000;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px 5px 0 0;
+  border-radius: 4px;
+}
+
+
+.sidebar-categories ul,
+.sidebar-recent-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-categories li,
+.sidebar-recent-posts li {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 10px;
+}
+.gallery-grid img {
+  width: 100%;
+  height: 80px; /* make them smaller */
+  object-fit: cover; /* crop to fit nicely */
+}
+.tags-grid span {
+  display: inline-block;
+  margin: 5px;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.blog-meta {
+  color: #888; /* grey color */
+  font-size: 14px;
+  margin-bottom: 15px; /* spacing below meta */
+  display: flex;
+  align-items: center;
+  gap: 6px; /* spacing between icons and text */
+  border-bottom: 1px solid #d3d3d3; /* light grey bottom border */
+  padding-bottom: 8px; /* spacing between text and border */
+}
+.meta-icon {
+  vertical-align: middle;
+  color: #888;
+}
+.sidebar-search .search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-search .search-icon {
+  position: absolute;
+  left: 10px;
+  color: #ffc000;   /* icon color */
+  font-size: 14px;  /* small icon */
+  pointer-events: none; /* allow typing over icon */
+}
+
+.sidebar-search input {
+  width: 100%;
+  padding: 8px 8px 8px 30px; /* left padding for icon */
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
+}
+
+.sidebar-search input:focus {
+  border-color: #ffc000;
+}
+.blog-categories {
+  font-size: 20px;
+  margin-top: 0;
+  padding-bottom: 5px;
+  display: inline-block;       /* make width fit content */
+  border-bottom: 3px solid #ffc000; /* adjust thickness */
+}
+.recent-blog-posts{
+  font-size: 20px;
+  margin-top: 0;
+  padding-bottom: 5px;
+  display: inline-block;       /* make width fit content */
+  border-bottom: 3px solid #ffc000; /* adjust thickness */
+
+}
+.blog-gallery{
+   font-size: 20px;
+  margin-top: 0;
+  padding-bottom: 5px;
+  display: inline-block;       /* make width fit content */
+  border-bottom: 3px solid #ffc000; /* adjust thickness */
+
+}
+.sidebar-tags .blog-tags {
+  font-size: 20px;
+  margin-top: 0;
+  padding-bottom: 5px;          /* space between text and border */
+  display: inline-block;         /* only as wide as text */
+  width: auto;                   /* important: don't stretch */
+  border-bottom: 3px solid #ffc000; /* short bottom border like others */
+}
+.sidebar-categories ul,
+.sidebar-recent-posts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; /* ensure items are left-aligned */
+}
+/* List items */
+.sidebar-categories li,
+.sidebar-recent-posts li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;                  /* space between arrow and text */
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+/* Wrap arrow + text in a span for hover effect */
+.sidebar-categories li .list-content,
+.sidebar-recent-posts li .list-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  color: #000;  /* default color */
+}
+
+/* Hover effect */
+.sidebar-categories li:hover .list-content,
+.sidebar-recent-posts li:hover .list-content {
+  transform: translateX(5px); /* move right */
+  color: #ffc000;             /* arrow + text turn yellow */
+}
+
+/* Keep badge unaffected */
+.sidebar-categories li .badge,
+.sidebar-recent-posts li .badge {
+  margin-left: auto;
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+
+.sidebar-recent-posts li .list-content a {
+  color: inherit;          /* inherit color from .list-content */
+  text-decoration: none;   /* remove underline */
+}
+.arrow-icon {
+  color: #000;      /* black */
+  font-size: 12px;  /* adjust size */
+  flex-shrink: 0;   /* prevent shrinking in flex */
+}
+
+/* Sidebar tags styling */
+
+
+/* Hover effect */
+.sidebar-tags .tags-grid span:hover {
+  background-color: #ffc000; /* gold on hover */
+  cursor: pointer; 
+  color: #fff;               /* white text */
+}
+.blogdetail-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0 10px;
+  color: #222;
+  text-align: center;
+}
+
+.blogdetail-subtitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #222;
+}
+/* Blog content spacing */
+.blog-content h3 {
+  margin: 15px 0 10px; /* top 15px, bottom 10px */
+  font-size: 25px;
+  text-align: center;
+}
+
+.blog-content p {
+  margin: 10px 0; /* smaller vertical spacing */
+  line-height: 1.8;
+  color: #444; 
+  font-size: 17px; 
+}
+
+.blog-content ul {
+  margin: 10px 0 15px 20px; /* top 10px, bottom 10px, indent 20px */
+  padding: 0;
+}
+
+.blog-content li {
+  margin-bottom: 6px; /* smaller spacing between list items */
+  color: #444; 
+  line-height: 1.8; 
+  font-size: 17px; 
+}
+
+/* Centered images */
+.blog-center-img {
+  margin: 15px auto; /* reduce vertical spacing */
+}
+
+/* Main image spacing */
+.blog-main-img {
+  margin-bottom: 15px; /* reduce space below main image */
+}
+
+/* Meta spacing */
+.blog-meta {
+  margin-bottom: 10px; /* less space between meta and subtitle */
+}
+
+/* Subtitle spacing */
+.blog-subtitle {
+  margin-bottom: 15px; /* less space below subtitle */
+}
+
+/* Tags wrapper spacing */
+.blog-tags-wrapper {
+  bottom: -50px; /* reduce gap from bottom of container */
+}
+.blog-main-img-wrapper {
+  position: relative; /* makes overlay button relative to this container */
+  display: inline-block; /* shrink to image width */
+  width: 100%; /* optional: full width */
+}
+
+.overlay-btn {
+  position: absolute;
+  bottom: 40px;         /* distance from bottom of image */
+  right: 30px;          /* distance from right of image */
+  background-color: #ffc000;
+  color: #fff;
+  padding: 10px 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3); /* black shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 2;           /* ensures it overlays image */
+}
+/* Sidebar category list item */
+.sidebar-categories li,
+.sidebar-recent-posts li {
+  display: flex;
+  justify-content: space-between; /* push badge to extreme right */
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+}
+
+/* Wrap arrow + category text only */
+.sidebar-categories li .list-content,
+.sidebar-recent-posts li .list-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;              /* space between arrow and text */
+  text-decoration: none;
+  color: #000;
+  flex: 1;                /* take available space */
+  transition: transform 0.3s, color 0.3s; /* smooth hover */
+}
+
+/* Hover effect applied only to text + arrow */
+.sidebar-categories li:hover .list-content,
+.sidebar-recent-posts li:hover .list-content {
+  transform: translateX(5px);  /* move text + arrow */
+  color: #ffc000;              /* color change */
+}
+
+/* Badge stays fixed */
+.sidebar-categories li .badge,
+.sidebar-recent-posts li .badge {
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  text-align: center;
+  min-width: 20px; /* optional: consistent size */
+}
+.sidebar-categories li {
+  display: flex;
+  justify-content: space-between; /* badge to extreme right */
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-categories li .list-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.sidebar-categories li:hover .list-content {
+  transform: translateX(5px);  /* only arrow + text moves */
+  color: #ffc000;
+}
+
+.sidebar-categories li .badge {
+  flex-shrink: 0;
+  background-color: #f5f5f5;
+  color: #000;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+/* Small devices (phones) */
+@media screen and (max-width: 575px) {
+  .blog-detail-container {
+    flex-direction: column; /* stack left and right sections */
+    padding: 20px 10px;
+  }
+
+  .blog-detail-left {
+    flex: 1 1 100%;
+    border: none;         /* optional: remove border for mobile */
+    border-radius: 0;     /* remove rounded corners */
+    padding-bottom: 20px;
+  }
+
+  .blog-content-wrapper {
+    padding: 10px 0;      /* reduce padding for mobile */
+    text-align: center;    /* center content */
+  }
+
+  .blog-content h3,
+  .blog-content p,
+  .blog-content ul,
+  .blog-tags {
+    display: block;        /* ensure proper stacking */
+    max-width: 100%;
+    text-align: left;      /* keep text readable */
+    margin: 10px auto;
+  }
+
+  .blog-main-img,
+  .blog-center-img {
+    width: 100%;           /* full width on mobile */
+    max-width: 100%;
+    margin: 15px 0;
+  }
+
+  .blog-tags-wrapper {
+    position: relative;   /* move tags inside container */
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  .blogdetail-title {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0 10px;
+  }
+
+  .blogdetail-subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .blog-meta {
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 13px;
+    border-bottom: none; /* optional: remove bottom border */
+    margin-bottom: 10px;
+  }
+
+  /* Sidebar moves below main content */
+  .blog-detail-right {
+    flex: 1 1 100%;
+    margin-top: 30px;
+    gap: 15px;
+  }
+
+  /* Sidebar elements full width */
+  .sidebar-search input {
+    width: 100%;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* smaller gallery grid on mobile */
+    gap: 8px;
+  }
+    .gallery-grid img {
+    height: 120px; /* increase height from 80px to 120px */
+    object-fit: cover; /* maintain cropping */
+  }
+
+  .tags-grid span,
+  .blog-tags-wrapper .tag {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .overlay-btn {
+    bottom: 30px;
+    right: 15px;
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  /* Sidebar headings smaller */
+  .sidebar-categories h4,
+  .recent-blog-posts h4,
+  .blog-gallery h4,
+  .sidebar-tags h4 {
+    font-size: 18px;
+    padding-bottom: 3px;
+  }
+}
+/* Sidebar Search Results */
+.sidebar-search-results {
+  background-color: #fff; /* match sidebar background */
+  border-radius: 6px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  max-height: 600px; /* optional: scrollable if many results */
+  overflow-y: auto;
+   scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.sidebar-search-results::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Align search results heading with other sidebar headings */
+.sidebar-search-results h4 {
+font-size: 20px;
+    margin-top: 0;
+    padding-bottom: 5px;
+    display: inline-block;
+    border-bottom: 3px solid #ffc000;
+}
+
+/* Remove default list styles and align items */
+.sidebar-search-results ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Each search result item with arrow */
+.sidebar-search-results li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.sidebar-search-results li:last-child {
+  border-bottom: none;
+}
+
+/* Wrap arrow + text in list-content for hover effect */
+.sidebar-search-results li .list-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.3s, color 0.3s;
+  flex: 1; /* take available space */
+}
+
+.sidebar-search-results li:hover .list-content {
+  transform: translateX(5px);
+  color: #ffc000;
+}
+
+/* Arrow icon styling */
+.sidebar-search-results .arrow-icon {
+  color: #000;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Hide scrollbar but allow scroll */
+.sidebar-search-results {
+  max-height: 600px;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+.sidebar-search-results::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+/* Small devices (phones) */
+@media screen and (max-width: 575px) {
+  .blog-detail-container {
+    padding-left: 15px;   /* increase horizontal padding */
+    padding-right: 15px;  /* increase horizontal padding */
+  }
+
+  .blog-detail-left {
+    padding-left: 15px;   /* more space inside left content */
+    padding-right: 15px;
+  }
+
+  .blog-detail-right {
+    padding-left: 15px;   /* more space inside right content */
+    padding-right: 15px;
+  }
+}
+
+

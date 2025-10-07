@@ -1,0 +1,285 @@
+.homeform-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start; /* ensures left and right start from same top */
+  padding-top: 0; /* remove extra padding if needed */
+}
+
+/* Left Side */
+.homeform-left {
+  flex: 1;
+  min-width: 350px;
+  color: #000;
+}
+
+.homeform-border-title {
+  display: inline-block;
+  position: relative;
+  line-height: 1; /* makes vertical align consistent */
+  padding-left: 30px; /* adjust for line width */
+}
+
+.homeform-border-title::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 5px;
+  width: 30px;
+  height: 5px;
+  background-color: #000;
+}
+
+.homeform-contact-text {
+  font-size: 49px;
+  font-weight:700; 
+}
+
+.homeform-info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: flex-start; /* aligns icon and text at top */
+}
+
+.homeform-icon {
+  background-color: #000;
+  color: #ffc000;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 25px;
+  flex-shrink: 0; /* prevents shrinking if text is long */
+}
+
+.homeform-info-text strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+/* Right Side */
+.homeform-right {
+  flex: 1;
+  min-width: 400px;
+  color: #000;
+}
+
+.homeform-right h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.homeform-right p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.homeform-form label {
+  display: block;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.homeform-form input,
+.homeform-form select,
+.homeform-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.homeform-captcha {
+  margin: 15px 0;
+}
+.homeform-form input:focus,
+.homeform-form select:focus,
+.homeform-form textarea:focus {
+  outline: none;                /* removes default outline */
+  border: 1px solid #ffc000;    /* golden border */
+  transition: all 0.3s ease;    /* smooth transition */
+}
+
+.homeform-submit-btn {
+  background-color: #ffc000;
+  border: none;
+  padding: 12px 25px;
+  color: #fff; 
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+/* Small desktop / tablet */
+@media (max-width: 1024px) {
+  .homeform-container {
+    gap: 30px;
+    padding-top: 40px;
+  }
+
+  .homeform-left {
+    min-width: 300px;
+  }
+
+  .homeform-right {
+    min-width: 300px;
+  }
+
+  .homeform-contact-text {
+    font-size: 36px;
+  }
+
+  .homeform-border-title {
+    font-size: 18px;
+    padding-left: 45px;
+  }
+
+  .homeform-border-title::before {
+    width: 35px;
+    height: 5px;
+  }
+}
+
+/* Tablets and small screens */
+@media (max-width: 768px) {
+  .homeform-container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .homeform-left,
+  .homeform-right {
+    width: 100%;
+    min-width: auto;
+    text-align: center;
+  }
+
+  .homeform-info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeform-icon {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .homeform-contact-text {
+    font-size: 28px;
+  }
+
+  .homeform-border-title {
+    font-size: 16px;
+    padding-left: 35px;
+    margin-bottom: 10px;
+  }
+
+  .homeform-border-title::before {
+    width: 30px;
+    height: 5px;
+  }
+
+  .homeform-right h2 {
+    font-size: 24px;
+  }
+
+  .homeform-form input,
+  .homeform-form select,
+  .homeform-form textarea {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .homeform-submit-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .homeform-container {
+    padding: 20px 10px;
+  }
+
+  .homeform-left,
+  .homeform-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .homeform-contact-text {
+    font-size: 22px;
+  }
+
+  .homeform-border-title {
+    font-size: 14px;
+    padding-left: 25px;
+    margin-bottom: 10px;
+  }
+
+  .homeform-border-title::before {
+    width: 25px;
+    height: 4px;
+  }
+
+  .homeform-info-item {
+    gap: 10px;
+  }
+
+  .homeform-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .homeform-right h2 {
+    font-size: 20px;
+  }
+
+  .homeform-right p {
+    font-size: 14px;
+  }
+
+  .homeform-form input,
+  .homeform-form select,
+  .homeform-form textarea {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .homeform-submit-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .homeform-captcha {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    margin: 15px 0;
+  }
+}
+
+/* Optional: further adjustments for mobile devices */
+@media (max-width: 480px) {
+  .homeform-captcha {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+  }
+}
+
+

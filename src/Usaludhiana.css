@@ -1,0 +1,186 @@
+/* USA Page - Matching Canada Page Style */
+.usa-main-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  padding-bottom: 150px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+/* Intro Section (Text + Image Grid) */
+.usa-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.usa-text {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.usa-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.usa-text p {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.usa-image img {
+  width: 100%;
+  display: block;
+}
+
+/* Sections (Headings + Paragraphs) */
+.usa-section {
+  margin-bottom: 50px;
+}
+
+.usa-section h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.usa-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Bullet Points Section */
+.usa-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  color: #333;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Google Map Section */
+.usa-map {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.usa-map iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 450px;
+  border: 0;
+}
+
+/* Responsive Layouts */
+@media (max-width: 992px) {
+  .usa-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .usa-image {
+    order: -1; /* Image comes above text */
+  }
+
+  .usa-text h2 {
+    font-size: 28px;
+  }
+
+  .usa-text p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .usa-text h2 {
+    font-size: 26px;
+  }
+
+  .usa-section h2 {
+    font-size: 26px;
+  }
+
+  .usa-text p,
+  .usa-section p,
+  .usa-section ul {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .usa-text h2 {
+    font-size: 24px;
+  }
+
+  .usa-section h2 {
+    font-size: 24px;
+  }
+
+  .usa-text p,
+  .usa-section p,
+  .usa-section ul {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .usa-text h2 {
+    font-size: 20px;
+  }
+
+  .usa-section h2 {
+    font-size: 20px;
+  }
+
+  .usa-text p,
+  .usa-section p,
+  .usa-section ul {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+}
+/* Fix: Keep mobile font size same as Canada page */
+@media (max-width: 600px) {
+  .intro-text p,
+  .section p,
+  .usa-text p,
+  .usa-section p {
+    font-size: 14px !important; /* keep readable */
+    line-height: 1.6 !important;
+  }
+
+  .intro-text h2,
+  .section h2 {
+    font-size: 26px !important;
+  }
+
+  .section h3 {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-text p,
+  .section p,
+  .usa-text p,
+  .usa-section p {
+    font-size: 13.5px !important;
+  }
+
+  .intro-text h2,
+  .section h2 {
+    font-size: 24px !important;
+  }
+}
+

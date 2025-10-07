@@ -1,0 +1,295 @@
+.contact-section {
+  max-width: 1200px;
+  margin: 40px auto; /* spacing from banner */
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.contact-page{
+    margin-bottom: 170px; 
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between; /* left & right columns */
+  align-items: center;            /* vertical center alignment */
+  flex-wrap: wrap; /* responsive */
+  gap: 20px;
+}
+
+/* Left column - social icons */
+.social-icons {
+  display: flex;
+  gap: 20px;              /* space between icons */
+  justify-content: flex-start;
+  align-items: center;    /* vertical alignment if needed */
+}
+
+.social-icons .icon {
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.social-icons .icon:hover {
+  color: #ffc000;
+}
+
+/* Right column - map */
+.map-wrapper {
+  width: 500px;           /* smaller rectangle */
+  height: 250px;          /* reduced height */
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+}
+.branches-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.branches-heading {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* Cards container */
+.branches-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 30px; /* space between cards */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Single Card */
+.branch-card {
+  border: 3px solid #000;  /* thick black border */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 350px;
+  box-sizing: border-box;
+  position: relative;
+}
+.branch-card{
+    cursor: pointer;
+}
+
+/* Logo top-left */
+.branch-logo {
+  width: 80px;
+  height: auto;
+  align-self: flex-start;
+  margin-bottom: 10px; /* space from map/title */
+}
+
+/* Map inside card */
+.branch-map {
+  flex-grow: 1;
+  height: 150px; /* small rectangle */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.branch-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Info below map */
+.branch-info {
+  text-align: left;
+}
+
+
+.branch-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  display: inline-block;      /* make underline only as wide as text */
+  border-bottom: 3px solid #ffc000;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .branch-map {
+    height: 120px;
+  }
+}
+
+.branch-icon {
+  color: #ffc000;
+  margin-right: 8px;
+}
+/* Medium devices (tablets: 768px - 992px) */
+@media screen and (max-width: 992px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    height: 200px;
+  }
+
+  .social-icons {
+    justify-content: flex-start;
+  }
+
+  .branches-container {
+    grid-template-columns: 1fr 1fr; /* keep 2 columns on tablets */
+    gap: 20px;
+  }
+
+  .branch-card {
+    min-height: 300px;
+    padding: 12px;
+  }
+
+  .branch-logo {
+    width: 70px;
+    margin-bottom: 8px;
+  }
+
+  .branch-map {
+    height: 120px;
+  }
+
+  .branch-title {
+    font-size: 16px;
+    border-bottom: 2px solid #ffc000;
+  }
+
+  .branch-info p {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (landscape phones: 576px - 767px) */
+@media screen and (max-width: 767px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    height: 180px;
+  }
+
+  .branches-container {
+    grid-template-columns: 1fr; /* stack cards vertically */
+    gap: 15px;
+  }
+
+  .branch-card {
+    min-height: 280px;
+    padding: 10px;
+  }
+
+  .branch-logo {
+    width: 60px;
+    margin-bottom: 6px;
+  }
+
+  .branch-map {
+    height: 100px;
+  }
+
+  .branch-title {
+    font-size: 15px;
+    border-bottom: 2px solid #ffc000;
+  }
+
+  .branch-info p {
+    font-size: 13px;
+  }
+
+  .social-icons {
+    gap: 15px;
+  }
+
+  .social-icons .icon {
+    font-size: 25px;
+  }
+}
+
+/* Extra small devices (portrait phones: <576px) */
+@media screen and (max-width: 575px) {
+  .contact-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .map-wrapper {
+    width: 100%;
+    height: 150px;
+  }
+
+  .branches-container {
+    grid-template-columns: 1fr; /* stack cards */
+    gap: 12px;
+  }
+
+  .branch-card {
+    min-height: 260px;
+    padding: 8px;
+  }
+
+  .branch-logo {
+    width: 50px;
+    margin-bottom: 5px;
+  }
+
+  .branch-map {
+    height: 90px;
+  }
+
+  .branch-title {
+    font-size: 14px;
+    border-bottom: 2px solid #ffc000;
+  }
+
+  .branch-info p {
+    font-size: 12px;
+  }
+
+  .social-icons {
+    gap: 12px;
+  }
+
+  .social-icons .icon {
+    font-size: 22px;
+  }
+}
+

@@ -1,0 +1,227 @@
+/* -------------------- Page Container -------------------- */
+.nzmoh-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  padding-bottom: 150px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* -------------------- Intro Section -------------------- */
+.nzmoh-intro {
+  margin-top: 50px;
+}
+
+.nzmoh-intro h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.nzmoh-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* -------------------- Flex Sections -------------------- */
+.nzmoh-flex {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.nzmoh-left {
+  flex: 1;
+}
+
+.nzmoh-left h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.nzmoh-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.nzmoh-left p strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.nzmoh-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nzmoh-right img {
+  max-width: 100%;
+  display: block;
+}
+
+/* -------------------- Regular Sections -------------------- */
+.nzmoh-section {
+  margin-top: 10px;
+}
+
+.nzmoh-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.nzmoh-section p strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #000;
+}
+
+.nzmoh-section ol {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.nzmoh-section ol li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* -------------------- Responsive Design -------------------- */
+@media (max-width: 992px) {
+  .nzmoh-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nzmoh-left,
+  .nzmoh-right {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nzmoh-left h2,
+  .nzmoh-section h2 {
+    font-size: 28px;
+  }
+
+  .nzmoh-left p,
+  .nzmoh-section p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nzmoh-left h2,
+  .nzmoh-section h2 {
+    font-size: 26px;
+  }
+
+  .nzmoh-left p,
+  .nzmoh-section p {
+    font-size: 14px;
+  }
+
+  .nzmoh-section ol li {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nzmoh-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .nzmoh-left,
+  .nzmoh-right {
+    width: 100%;
+    text-align: left;
+  }
+
+  .nzmoh-left h2,
+  .nzmoh-section h2 {
+    font-size: 24px;
+  }
+
+  .nzmoh-left p,
+  .nzmoh-section p {
+    font-size: 13px;
+  }
+
+  .nzmoh-section ol li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nzmoh-left h2,
+  .nzmoh-section h2 {
+    font-size: 20px;
+  }
+
+  .nzmoh-left p,
+  .nzmoh-section p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .nzmoh-section ol li {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+}
+/* Flex Heading */
+.nzmoh-flex-heading {
+  width: 100%;
+  text-align: left; /* Center above left/right columns */
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: -10px; /* Reduced from larger value */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .nzmoh-flex-heading {
+    font-size: 28px;
+    margin-bottom: 12px; /* Reduce gap on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .nzmoh-flex-heading {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nzmoh-flex-heading {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nzmoh-flex-heading {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}

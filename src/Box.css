@@ -1,0 +1,258 @@
+.services-section {
+  width: 100%;
+  padding: 60px 20px 100px;
+  position: relative;
+  z-index: 1;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+.service-card {
+  position: relative;
+  border-radius: 10px;
+  margin-top: -180px; /* overlap above section */
+  height: 220px; 
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Background image */
+.service-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* Box overlay */
+.boxoverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  padding: 20px;
+  box-sizing: border-box;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* Icon and number */
+.boxoverlay .icon {
+  font-size: 4rem;
+  color: #ffc000;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  transition: opacity 0.3s ease;
+}
+
+.boxoverlay .service-title {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 600;
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.boxoverlay .service-number {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffc000;
+}
+
+/* Hover content hidden by default */
+/* Hover content hidden by default - slide from bottom */
+.hover-content {
+  position: absolute;
+  bottom: 0; /* start from bottom */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  padding: 20px;
+  opacity: 0;
+  transform: scaleY(0); /* collapsed vertically */
+  transform-origin: bottom; /* animation starts from bottom */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  overflow: hidden;
+  box-sizing: border-box; 
+}
+
+/* On hover, expand from bottom */
+.service-card:hover .hover-content {
+  opacity: 1;
+  transform: scaleY(1);
+}
+.service-card::after {
+  content: "";
+  position: absolute;
+  bottom: 10px; /* distance from bottom of card */
+  left: 50%;
+  width: 0; /* start hidden */
+  height: 3px; /* thickness */
+  background: #ffc000;
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+  z-index: 10;
+}
+
+/* On hover, show small fixed-width border */
+.service-card:hover::after {
+  width: 40px; /* fixed width for all cards */
+}
+/* Show hover content, hide original icon/title */
+.service-card:hover .hover-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.service-card:hover .boxoverlay .icon,
+.service-card:hover .boxoverlay .service-title {
+  opacity: 0;
+}
+
+.hover-content h4 {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000;
+  border-bottom: none; 
+  margin-bottom: -2px; /* space between heading and paragraph */
+  padding-bottom: 10px; 
+  text-align: left; /* ensure heading aligns left */
+  position: relative; 
+}
+
+.hover-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 40px; /* space before circle */
+  text-align: left; /* paragraph aligns left */
+}
+/* Center circle with arrow: visually centered relative to card including overlap */
+/* Center circle with arrow: overlap bottom and next section */
+.hover-circle {
+  width: 60px;
+  height: 60px;
+  background: #ffc000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+
+  position: absolute;
+  bottom: -30px; /* half of its height to overlap card & next section */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20; /* higher than card & hover content */
+  transition: all 0.3s ease;
+  opacity: 0; /* initially hidden */
+}
+
+/* Show circle on hover */
+.service-card:hover .hover-circle {
+  opacity: 1;
+}
+
+.hover-content h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* at the bottom of heading */
+  left: 0;
+  width: 40px; /* fixed width for all cards */
+  height: 3px; /* thickness */
+  background: #ffc000;
+  transition: all 0.3s ease;
+  opacity: 0; /* hidden initially */
+}
+.service-card:hover .hover-content h4::after {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* spacing between boxes */
+  }
+
+  .service-card {
+    margin-top: 0;        /* remove negative overlap */
+    height: auto;         /* let it grow naturally */
+    min-height: 220px;    /* ensure minimum height */
+  }
+
+  .hover-circle {
+    bottom: -20px; /* adjust circle so it doesn't overlap too much */
+  }
+}
+@media (max-width: 768px) {
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center children horizontally */
+    gap: 20px;
+  }
+
+  .service-card {
+    margin-top: 0;
+    height: auto;
+    min-height: 200px;
+    width: 90%;        /* take 90% of screen */
+    max-width: 450px;  /* but never exceed this */
+    margin: 0 auto;    /* center perfectly */
+  }
+
+  .hover-circle {
+    bottom: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-section {
+    padding-left: 0;   /* remove uneven padding */
+    padding-right: 0;  /* remove uneven padding */
+  }
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center children horizontally */
+    gap: 20px;
+  }
+
+  .service-card {
+    margin-top: 0;
+    height: auto;
+    min-height: 200px;
+    width: 90%;        /* responsive */
+    max-width: 450px;  /* balanced look (450px was too wide) */
+    margin: 0 auto;    /* perfectly centered */
+  }
+}
+
+

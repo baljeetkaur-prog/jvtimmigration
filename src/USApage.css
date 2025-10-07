@@ -1,0 +1,111 @@
+.usa-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.usa-page {
+  margin-top: 60px;
+  margin-bottom: 170px;
+}
+
+.usa-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.usa-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.usa-left h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.usa-left p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333; 
+}
+
+.usa-right img {
+  width: 100%;
+}
+
+.usa-section-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.usa-section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 3px;
+  background-color: #ffc000;
+}
+
+.usa-bullet-points {
+  list-style: disc;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.usa-bullet-points li {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .usa-grid {
+    grid-template-columns: 1fr;
+  }
+  .usa-right {
+    order: -1; /* image comes first on mobile */
+  }
+}
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+  .usa-grid {
+    display: block; /* switch to block layout */
+  }
+
+  .usa-left, 
+  .usa-right {
+    width: 100%;
+  }
+
+  .usa-right {
+    margin-top: 20px; /* space between text and image */
+  }
+
+  /* Optional: adjust headings and paragraphs for smaller screens */
+  .usa-left h2, 
+  .usa-left h3 {
+    font-size: 24px;
+  }
+
+  .usa-left p, 
+  .usa-bullet-points li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+

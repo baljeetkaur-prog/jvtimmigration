@@ -1,0 +1,685 @@
+/* Page Container */
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* same as Ludhiana page */
+  padding-bottom: 150px; 
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  margin-bottom: 20px; 
+}
+.second-section{
+  margin-top:-90px; 
+}
+
+/* Intro Section */
+.page-intro,
+.flex-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 50px; /* similar spacing */
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px; /* same as Ludhiana-text */
+  line-height: 1.7;
+}
+
+.intro-text h1,
+.intro-text h2 {
+  font-size: 32px; /* match Ludhiana page */
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000; 
+}
+.servicehead{
+  color: #000; 
+  margin-top:6px; 
+  font-size: 30px; 
+  font-weight: 600; 
+}
+.intro-image {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-image img {
+  max-width: 80%;
+  display: block;
+}
+
+/* Sections Headings & Paragraphs */
+.section h2 {
+  font-size: 30px; /* Ludhiana services/whychoose headings */
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.section h2.benefits-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section h2.benefits-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150px;
+  height: 2px;
+  background-color: #ffc000;
+}
+
+.section h3 {
+  font-size: 20px; /* same as Ludhiana subsections */
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.section p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Image Rows */
+.image-row {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.image-row img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Benefits Section Boxes */
+.benefits {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.benefits > div {
+  flex: 1;
+  font-size: 16px; /* Ludhiana tick items */
+}
+
+/* FAQ Section */
+.faqs ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+/* FAQ Section */
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 0;
+  color: #111;
+  gap: 10px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 20px;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+  color: #ffc000;
+}
+
+.faq-question.open span {
+  color: #ffc000;
+}
+
+.faq-answer {
+  padding: 10px 0;
+  font-weight: 400;
+  color: #555;
+}
+
+.faq-divider {
+  border-bottom: 1px solid #ccc;
+  opacity: 0.5;
+}
+
+
+/* Service Locations Section */
+.service-locations-container {
+  text-align: center;
+  margin: 40px 0;
+  position: relative;
+}
+
+.service-locations-container h2 {
+  display: inline-block;
+  font-size: 20px; /* match Ludhiana page */
+  font-weight: 700;
+  position: relative;
+}
+
+.service-locations-container h2::before {
+  content: "";
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 2px;
+  background-color: #ffc000;
+}
+
+.service-locations {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-locations > div {
+  display: inline-flex;       /* shrink to content */
+  align-items: center;        /* vertical center */
+  justify-content: center;    /* horizontal center */
+  height: 30px;               /* flexible height */
+  padding: 8px;               /* uniform padding */
+  font-size: 19px;            /* same as Australia */
+  font-weight: 600;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #ffc000;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.service-locations > div:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .image-row,
+  .benefits,
+  .service-locations,
+  .flex-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.second-section h3{
+  color: #000; 
+  font-size: 20px; 
+}
+.second-section p {
+  line-height: 1.9; /* slightly more space between lines */
+  margin-bottom: 20px; /* space between paragraphs */
+  font-size: 16px; /* keep consistent with rest of page */
+  color: #555;
+}
+.faq-icon.open {
+  transform: rotate(180deg);
+  color: #ffc000;
+}
+/* Paragraphs color updated to black */
+.section p,
+.intro-text,
+.intro-text p,
+.experience-item p,
+.why-points p,
+.why-description,
+.second-section p,
+.australia-left p,
+.australia-fullwidth p,
+.australia-sub-left ul li,
+.australia-sub-right ul li,
+.faq-answer {
+    color: #333; /* change font color to black */
+}
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  align-items: center; /* only aligns question text and icon horizontally */
+  cursor: pointer;
+  font-weight: 600;
+  padding: 10px 0;
+  color: #111;
+  gap: 10px;
+}
+
+.faq-icon {
+  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 20px;
+}
+
+/* Rotate icon on open */
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+  color: #ffc000;
+}
+
+.faq-question.open span {
+  color: #ffc000;
+}
+
+/* Make answer always appear below question */
+.faq-answer {
+  display: block;       /* ensures vertical stacking */
+  padding-left: 30px;   /* indent slightly to line up visually */
+  padding-top: 5px;
+  color: #555;
+  font-weight: 400;
+}
+/* -------------------- Large Tablets / Small Laptops (992px - 768px) -------------------- */
+@media (max-width: 992px) {
+  .page-intro,
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .intro-text,
+  .intro-image {
+    flex: unset;
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    font-size: 28px;
+  }
+
+  .intro-text p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-locations {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .service-locations > div {
+    width: 80%; /* adjust width for smaller screens */
+    margin: 0 auto;
+  }
+}
+
+/* -------------------- Tablets / Large Phones (768px - 600px) -------------------- */
+@media (max-width: 768px) {
+  .page-intro,
+  .flex-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    font-size: 26px;
+  }
+
+  .intro-text p {
+    font-size: 14px;
+  }
+
+  .section h2,
+  .benefits-title {
+    font-size: 26px;
+  }
+
+  .section h3 {
+    font-size: 18px;
+  }
+
+  .section p {
+    font-size: 14px;
+  }
+
+  .image-row img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .benefits > div {
+    width: 100%;
+  }
+}
+
+/* -------------------- Small Screens / Phones (600px - 480px) -------------------- */
+@media (max-width: 600px) {
+  .page-intro,
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .section h2,
+  .benefits-title {
+    font-size: 24px;
+  }
+
+  .section h3 {
+    font-size: 16px;
+  }
+
+  .section p {
+    font-size: 13px;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-row img {
+    width: 100%;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-locations {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-locations > div {
+    width: 90%;
+  }
+}
+
+/* -------------------- Extra Small Screens / Mobile Portrait (480px and below) -------------------- */
+@media (max-width: 480px) {
+  .page-intro,
+  .flex-row {
+    flex-direction: column;
+    align-items: left;
+    gap: 15px;
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    font-size: 20px;
+  }
+
+  .intro-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .section h2,
+  .benefits-title {
+    font-size: 20px;
+  }
+
+  .section h3 {
+    font-size: 15px;
+  }
+
+  .section p {
+    font-size: 12px;
+  }
+
+  .image-row img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .benefits > div {
+    width: 100%;
+  }
+
+  .service-locations {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-locations > div {
+    width: 100%;
+    padding: 12px 0;
+  }
+
+  /* FAQ section adjustments */
+  .faq-answer {
+    padding-left: 20px;
+    font-size: 13px;
+  }
+
+  .faq-question {
+    font-size: 14px;
+  }
+
+  .faq-icon {
+    font-size: 18px;
+  }
+}
+/* Reduce margin-top for second-section on smaller screens */
+@media (max-width: 992px) {
+  .second-section {
+    margin-top: -90px; /* reduced from -90px */
+  }
+}
+
+@media (max-width: 768px) {
+  .second-section {
+    margin-top: 30px; /* even less on tablets */
+  }
+  .second-section h2{
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .second-section {
+    margin-top: 20px; /* minimal margin on mobile portrait */
+  }
+}
+/* Remove front border on small screens */
+@media (max-width: 768px) {
+  .service-locations-container h2::before {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-locations-container h2::before {
+    display: none;
+  }
+}
+/* Small Screens / Phones (600px - 480px) */
+@media (max-width: 600px) {
+  .service-locations > div {
+    padding: 4px 0;   /* very small vertical padding */
+    font-size: 18px;  /* smaller text */
+    line-height: 1.1; /* tight line height */
+  }
+}
+
+@media (max-width: 480px) {
+  .service-locations > div {
+    padding: 3px 0;   /* minimal padding */
+    font-size: 13px;  /* small text */
+    line-height: 1.1;
+  }
+}
+@media (max-width: 992px) {
+  .service-locations > div {
+    width: auto; /* shrink to content, do not stretch */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-locations > div {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-locations > div {
+    width: auto;
+    padding: 4px 10px;
+    font-size: 13px;
+    line-height: 1.1;
+  }
+}
+/* Small Screens / Phones (600px - 480px) */
+@media (max-width: 600px) {
+  .page-intro,
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start; /* align items to left instead of center */
+    gap: 20px;
+  }
+
+  .intro-text,
+  .intro-image {
+    flex: unset;
+    width: 100%;
+    text-align: left; /* text stays left-aligned */
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    font-size: 24px;
+  }
+
+  .intro-text p {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .image-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .image-row img {
+    width: 100%;
+  }
+
+  .benefits {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-locations {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .service-locations > div {
+    width: 90%;
+  }
+}
+
+/* Extra Small Screens / Mobile Portrait (480px and below) */
+@media (max-width: 480px) {
+  .page-intro,
+  .flex-row {
+    flex-direction: column;
+    align-items: flex-start; /* align left */
+    gap: 15px;
+  }
+
+  .intro-text,
+  .intro-image {
+    width: 100%;
+    text-align: left; /* keep text left-aligned */
+  }
+
+  .intro-text h1,
+  .intro-text h2 {
+    font-size: 20px;
+  }
+
+  .intro-text p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .image-row,
+  .benefits,
+  .service-locations {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .image-row img,
+  .benefits > div,
+  .service-locations > div {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

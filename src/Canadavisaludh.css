@@ -1,0 +1,146 @@
+/* Page Container */
+.cvl-container {
+  max-width: 1200px;
+  margin: 50px auto 150px auto;
+  padding: 0 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Intro Section */
+.cvl-intro-section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cvl-intro-text {
+  flex: 1 1 500px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.cvl-intro-text h1,
+.cvl-intro-text h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.cvl-intro-image {
+  flex: 1 1 400px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.cvl-intro-image img {
+  max-width: 80%;
+  display: block;
+}
+
+/* Headings */
+.cvl-heading {
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cvl-subheading {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 25px 0 15px 0;
+  color: #000;
+}
+
+/* Paragraphs */
+.cvl-paragraph {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Benefits List */
+.cvl-benefits-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.cvl-benefits-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.cvl-benefits-list li svg {
+  color: #000;
+  margin-right: 10px;
+}
+
+/* Commitment Section */
+.cvl-commitment-section {
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.cvl-commitment-text {
+  flex: 1 1 500px;
+}
+
+.cvl-commitment-image {
+  flex: 1 1 400px;
+}
+
+.cvl-commitment-image img {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .cvl-intro-section,
+  .cvl-commitment-section {
+    flex-direction: column;
+  }
+
+  .cvl-intro-image,
+  .cvl-intro-text,
+  .cvl-commitment-text,
+  .cvl-commitment-image {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .cvl-heading {
+    font-size: 28px;
+  }
+  .cvl-subheading {
+    font-size: 22px;
+  }
+  .cvl-paragraph,
+  .cvl-benefits-list li {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cvl-heading {
+    font-size: 24px;
+  }
+  .cvl-subheading {
+    font-size: 20px;
+  }
+  .cvl-paragraph,
+  .cvl-benefits-list li {
+    font-size: 14px;
+  }
+}

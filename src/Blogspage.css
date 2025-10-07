@@ -1,0 +1,207 @@
+.blogs-banner {
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.blogs-banner-content .blogs-heading {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blogs-breadcrumb {
+  font-size: 16px;
+  color: #f1f1f1;
+}
+
+.blogs-page-section {
+  padding: 60px 20px;
+  margin-bottom: 200px;
+}
+
+.blogs-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blogs-intro {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.blogs-small-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0; /* remove spacing */
+  position: relative;
+  padding-left: 45px;
+  display: inline-block;
+}
+
+.blogs-small-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35px;
+  height: 4px;
+  background-color: #ffc000;
+}
+
+.blogs-intro {
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative; /* prevent any floating content overlapping */
+}
+
+.blogs-big-heading {
+  font-size: 45px;
+  font-weight: 700;
+  color: #222;
+  margin-top: 0; 
+}
+
+.blogs-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  column-gap: 20px;
+  row-gap: 150px;
+  justify-content: center;     /* align grid to start (left) */
+  padding: 0 20px 0 90px;     /* increase left padding to nudge right */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* Lift the 2nd and 5th cards slightly */
+.blogs-page-grid .blog-card {
+  transition: transform 0.3s ease;
+}
+
+/* Make all cards slightly bigger */
+.blogs-page-grid .blog-card:not(:nth-child(2)):not(:nth-child(5)) {
+  transform: scale(1.2);
+}
+
+/* Lift the 2nd and 5th cards slightly AND make bigger */
+.blogs-page-grid .blog-card:nth-child(2),
+.blogs-page-grid .blog-card:nth-child(5) {
+  transform: translateY(-130px) scale(1.2);
+}
+/* Small devices (phones) */
+@media screen and (max-width: 575px) {
+  .blogs-page-section {
+    padding: 0 10px 100px; /* remove top padding to allow card to reach top */
+    margin-bottom: 100px;
+  }
+
+  .blogs-small-heading {
+    font-size: 14px;
+    padding-left: 20px;
+  }
+
+  .blogs-small-heading::before {
+    width: 15px;
+    height: 2px;
+  }
+
+  .blogs-big-heading {
+    font-size: 24px;
+  }
+
+  .blogs-page-grid {
+    grid-template-columns: 1fr; /* single column */
+    row-gap: 60px;
+    padding: 0 10px;
+    justify-content: center; /* center grid on mobile */
+  }
+
+  /* Reset transform for all cards on phones */
+  .blogs-page-grid .blog-card {
+    transform: scale(1) !important;
+  }
+
+  /* Move 2nd card to very top */
+  .blogs-page-grid .blog-card:nth-child(2) {
+    order: -1; /* move to top */
+    position: relative;
+    margin-top: -190px; /* push higher */
+    z-index: 2; /* overlaps content below */
+  }
+}
+/* Small devices (phones) */
+/* Small devices (phones) */
+@media screen and (max-width: 575px) {
+  .blogs-page-section {
+    padding: 30px 10px 100px; /* add some top padding for spacing */
+    margin-bottom: 100px;
+    text-align: center; /* center all text */
+  }
+
+  .blogs-intro {
+    margin-top: 20px; /* spacing from top */
+    text-align: center;
+  }
+
+  .blogs-small-heading {
+    font-size: 14px;
+    padding-left: 0; /* remove left padding */
+    display: block;
+    margin: 0 auto 10px; /* center and add bottom margin */
+  }
+
+
+
+  .blogs-big-heading {
+    font-size: 24px;
+    text-align: center; /* center heading */
+    margin-top: 10px; /* spacing from small heading */
+    margin-bottom: 20px; /* spacing from grid */
+  }
+
+  .blogs-page-grid {
+    grid-template-columns: 1fr; /* single column */
+    row-gap: 60px;
+    padding: 0 10px;
+    justify-content: center; /* center grid */
+    margin: 0 auto;
+  }
+
+  /* Reset transform for all cards on phones */
+  .blogs-page-grid .blog-card {
+    transform: scale(1) !important;
+    margin: 0 auto; /* center each card */
+  }
+
+  /* Move 2nd card to very top */
+  .blogs-page-grid .blog-card:nth-child(2) {
+    order: -1; /* move to top */
+    position: relative;
+    margin: -190px auto 0; /* push higher and center */
+    z-index: 2; /* overlaps content below */
+  }
+}
+@media screen and (max-width: 575px) {
+  .blogs-small-heading {
+    font-size: 14px;
+    padding-left: 20px; /* add some padding for the bar */
+    display: inline-block;
+    margin: 0 auto 10px;
+  }
+
+  .blogs-small-heading::before {
+    content: "";
+    position: absolute;
+    left: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* smaller width for mobile */
+    height: 2px;  /* thinner line for mobile */
+    background-color: #ffc000;
+    display: inline-block; /* keep it visible */
+  }
+}
+

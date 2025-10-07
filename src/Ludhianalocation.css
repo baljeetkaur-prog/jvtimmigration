@@ -1,0 +1,177 @@
+.ludhianapagecontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* small horizontal padding */
+  margin-top: 50px;
+}
+.ludhiana-page{
+    padding-bottom: 150px; 
+}
+
+/* Intro Section */
+.ludhiana-intro-section {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ludhiana-text {
+  flex: 1;
+  text-align: left;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.ludhiana-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.ludhiana-image {
+  flex: 1;
+  text-align: center;
+  align-self: center; /* vertically centers the image relative to text */
+  display: flex;
+  justify-content: center;
+}
+
+.ludhiana-image img {
+  max-width: 100%;
+}
+
+/* Services Section */
+.ludhiana-services, .ludhiana-whychoose {
+  text-align: left;
+}
+
+.ludhiana-services h2, .ludhiana-whychoose h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.ludhiana-services p, .ludhiana-whychoose p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Tick List */
+.jvt-ticks {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+.jvt-ticks li {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.tick-icon {
+  color: #ffc000;
+  margin-right: 10px;
+}
+/* Small devices: phones */
+@media screen and (max-width: 575px) {
+  .ludhiana-intro-section {
+    flex-direction: column; /* stack text and image vertically */
+    gap: 20px;
+  }
+
+  .ludhiana-text {
+    text-align: left; /* center text for small screens */
+    font-size: 15px;
+  }
+
+  .ludhiana-text h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .ludhiana-image {
+    justify-content: center;
+  }
+
+  .ludhiana-image img {
+    max-width: 90%; /* slightly smaller image on mobile */
+    height: auto;
+  }
+
+  .ludhiana-services h2,
+  .ludhiana-whychoose h2 {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .ludhiana-services p,
+  .ludhiana-whychoose p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .jvt-ticks li {
+    font-size: 15px;
+    gap: 8px;
+  }
+
+  .tick-icon {
+    margin-right: 8px;
+    font-size: 14px;
+  }
+
+  .ludhianapagecontainer {
+    padding: 0 15px;
+  }
+
+  .ludhiana-page {
+    padding-bottom: 100px;
+  }
+}
+
+/* Medium devices: tablets */
+@media screen and (min-width: 576px) and (max-width: 991px) {
+  .ludhiana-intro-section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .ludhiana-text {
+    font-size: 16px;
+  }
+
+  .ludhiana-text h2 {
+    font-size: 28px;
+  }
+
+  .ludhiana-image img {
+    max-width: 80%;
+  }
+
+  .ludhiana-services h2,
+  .ludhiana-whychoose h2 {
+    font-size: 26px;
+  }
+
+  .ludhiana-services p,
+  .ludhiana-whychoose p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .jvt-ticks li {
+    font-size: 16px;
+  }
+
+  .tick-icon {
+    margin-right: 10px;
+  }
+}
+

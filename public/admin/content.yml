@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main  # your default branch
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "pages"
+    label: "Website Pages"
+    folder: "src/content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Page Title", name: "title", widget: "string" }
+      - { label: "Meta Description", name: "meta_description", widget: "text" }
+      - { label: "Page Content", name: "body", widget: "markdown" }
+      - { label: "Internal Links", name: "links", widget: "list" }

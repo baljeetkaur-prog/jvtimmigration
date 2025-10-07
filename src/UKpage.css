@@ -1,0 +1,146 @@
+.uk-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.uk-page {
+  margin-bottom: 170px;
+  margin-top: 60px;
+}
+
+.uk-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.uk-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.uk-left p,
+.uk-bottom-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.uk-right img {
+  width: 100%;
+}
+
+.uk-banner-img img {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+}
+
+.uk-section-heading {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.uk-section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 120px;
+  height: 3px;
+  background-color: #ffc000;
+}
+
+.uk-reasons {
+  margin-top: 20px;
+  padding-left: 40px;
+  counter-reset: reason-counter;
+  list-style: none;
+}
+
+.uk-reasons li {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #333;
+  position: relative;
+  counter-increment: reason-counter;
+}
+
+.uk-reasons li::before {
+  content: counter(reason-counter) ". ";
+  position: absolute;
+  left: -40px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Tablets and below */
+@media (max-width: 768px) {
+  .uk-grid {
+    grid-template-columns: 1fr;
+    gap: 20px; /* reduced spacing */
+  }
+
+  .uk-right {
+    order: 0; /* normal order */
+  }
+
+  .uk-left {
+    margin-bottom: 10px; /* tighter spacing */
+  }
+
+  .uk-bottom-text {
+    margin-top: 10px;
+  }
+
+  .uk-container {
+    margin: 10px auto; /* reduce top/bottom space */
+    padding: 0 15px;
+  }
+
+  .uk-page {
+    margin-top: 30px;
+    margin-bottom: 150px; /* much smaller */
+  }
+
+  .uk-banner-img img {
+    margin: 5px 0; /* tighter spacing around banner image */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .uk-left h2 {
+    font-size: 24px;
+  }
+
+  .uk-left p,
+  .uk-bottom-text {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  .uk-right img {
+    width: 100%;
+    margin: 0; /* no extra gaps */
+  }
+
+  .uk-grid {
+    gap: 15px; /* minimal gap between elements */
+  }
+
+  .uk-page {
+    margin-top: 20px;
+    margin-bottom: 150px;
+  }
+}

@@ -1,0 +1,379 @@
+/* Container */
+.overseas-content .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+  margin-bottom: 100px; 
+}
+.overseas-head{
+    font-size: 32px; 
+    font-weight: 700; 
+    margin-bottom: 15px; 
+    color: #000; 
+}
+
+/* Two columns layout */
+.overseas-two-columns {
+  display: flex;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.overseas-two-columns .left,
+.overseas-two-columns .right {
+  flex: 1;
+}
+
+.overseas-two-columns img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Points list (Work Visas, Manpower Recruitment, etc.) */
+.overseas-points {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.overseas-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* spacing between icon and text */
+  margin-bottom: 15px;
+  line-height: 1.7; /* match Ludhiana page */
+  font-size: 16px;
+  color: #333;
+}
+
+.tick-icon {
+  background-color: #ffc000;
+  color: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+/* Benefits Section */
+.benefits-section {
+  margin: 50px 0;
+  text-align: left;
+}
+
+.benefits-section h3 {
+font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+  text-align: center;
+}
+
+.benefits-two-columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.benefits-two-columns > div {
+  flex: 1 1 400px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+.benefits-two-columns h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.benefits-two-columns p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Contact Section */
+.overseas-contact-section {
+  margin: 60px 0;
+  text-align: left;
+}
+
+.overseas-contact-section .overseas-small-heading {
+font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 4px;
+    position: relative;
+    padding-left: 70px;
+    line-height: 1.2;
+}
+
+.overseas-contact-section h2 {
+  font-size: 49px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.overseas-contact-section h2 .highlight {
+  color: #ffc000;
+}
+
+.contact-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.contact-icon-round {
+  background-color: #ffc000;
+  color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  font-size: 25px;
+  flex-shrink: 0;
+}
+
+.contact-card h4 {
+  margin: 0 0 5px 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+}
+
+.contact-card p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .overseas-two-columns,
+  .benefits-two-columns,
+  .contact-info-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .overseas-two-columns img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overseas-content .container {
+    padding: 30px 15px;
+  }
+
+  .overseas-contact-section h2 {
+    font-size: 24px;
+  }
+
+  .benefits-two-columns h4 {
+    font-size: 16px;
+  }
+
+  .benefits-two-columns p,
+  .contact-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contact-card h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .overseas-content .container {
+    padding: 20px 10px;
+  }
+
+  .benefits-two-columns,
+  .contact-info-cards {
+    gap: 15px;
+  }
+
+  .benefits-two-columns h4,
+  .contact-card h4 {
+    font-size: 14px;
+  }
+
+  .benefits-two-columns p,
+  .contact-card p,
+  .overseas-points li {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+.overseas-content p{
+    font-size: 16px;
+    line-height: 1.7;
+    font-weight: 400;
+    color: #333;
+}
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .overseas-two-columns,
+  .benefits-two-columns,
+  .contact-info-cards {
+    flex-direction: column;
+    gap: 15px; /* reduced from 20px */
+  }
+
+  .overseas-two-columns img {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overseas-content .container {
+    padding: 30px 15px;
+  }
+
+  .overseas-contact-section h2 {
+    font-size: 24px;
+  }
+
+  .benefits-two-columns h4 {
+    font-size: 16px;
+  }
+
+  .benefits-two-columns p,
+  .contact-card p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .contact-card h4 {
+    font-size: 14px;
+  }
+
+  /* Reduce gaps further for tablets */
+  .benefits-two-columns,
+  .contact-info-cards {
+    gap: 10px; /* tighter spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .overseas-content .container {
+    padding: 20px 10px;
+  }
+
+  .benefits-two-columns,
+  .contact-info-cards {
+    gap: 8px; /* minimal gap for mobile */
+  }
+
+  .benefits-two-columns h4,
+  .contact-card h4 {
+    font-size: 14px;
+  }
+
+  .benefits-two-columns p,
+  .contact-card p,
+  .overseas-points li {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+}
+/* Small screens adjustments for overseas-two-columns */
+@media (max-width: 768px) {
+  .overseas-two-columns {
+    flex-direction: column;
+    gap: 15px; /* reduced gap */
+  }
+
+  .overseas-two-columns .left,
+  .overseas-two-columns .right {
+    flex: unset;      /* remove flex:1 */
+    width: 100%;      /* take only needed width */
+  }
+
+  .overseas-two-columns img {
+    width: 100%;
+    margin-top: 10px; /* small top margin for spacing */
+  }
+}
+
+@media (max-width: 480px) {
+  .overseas-two-columns {
+    gap: 8px; /* minimal gap */
+  }
+
+  .overseas-two-columns .left,
+  .overseas-two-columns .right {
+    width: 100%;    /* full width */
+    flex: unset;    /* remove flex:1 */
+  }
+
+  .overseas-two-columns img {
+    width: 100%;
+    margin-top: 5px;
+  }
+}
+/* Small screens adjustments for benefits cards */
+@media (max-width: 768px) {
+  .benefits-two-columns > div {
+    flex: unset;      /* remove flex: 1 1 400px */
+    width: 100%;      /* take full width */
+  }
+
+  .benefits-two-columns {
+    gap: 10px;        /* reduce spacing between cards */
+  }
+}
+
+@media (max-width: 480px) {
+  .benefits-two-columns > div {
+    width: 100%;
+    flex: unset;
+  }
+
+  .benefits-two-columns {
+    gap: 8px;         /* minimal gap for mobile */
+  }
+}
+.overseas-contact-section .overseas-small-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;         /* length of the line */
+  height: 4px;         /* thickness of the line */
+  background-color: #ffc000;
+}
+
+/* Responsive: remove line on mobile */
+@media (max-width: 768px) {
+
+  .overseas-contact-section {
+    text-align: left; /* center the heading */
+  }
+}
+
+
+
+
+
+

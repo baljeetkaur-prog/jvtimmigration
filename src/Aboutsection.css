@@ -1,0 +1,234 @@
+.about-section {
+  width: 100%;
+  padding: 20px 20px; /* increase height for spacing */
+  background-color: #fff;
+  box-sizing: border-box; /* ensures padding doesn't cause overflow */
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch; /* make both sides same height */
+  gap: 50px;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.about-left {
+  flex: 1 1 400px; /* shrink/grow properly, min 400px */
+  max-width: 500px;
+}
+
+.about-left img {
+  width: 90%;
+  object-fit: cover;
+  height: 100%;
+  display: block; /* avoids inline space issues */
+}
+
+.about-right {
+  flex: 1 1 500px; /* shrink/grow properly */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.small-heading {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 4px;
+  position: relative;
+  padding-left: 70px;
+  line-height: 1.2;
+}
+
+.small-heading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 5px;
+  background-color: #ffc000;
+}
+
+.big-heading {
+  font-size: 50px;
+  font-weight: 700;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.big-heading .highlight-yellow {
+  color: #ffc000;
+}
+
+.big-heading .highlight-black {
+  color: #000;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #6E6E6E;
+  margin-bottom: 15px;
+}
+
+.content-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #f5f5f5;
+  margin: 15px 0;
+}
+
+.about-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.bottom-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  color: #000;
+}
+
+.bottom-icon {
+  color: #ffc000;
+  font-size: 50px;
+}
+
+.about-bottom-border {
+  width: 2px;
+  background-color: #f5f5f5;
+  align-self: stretch;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-left, .about-right {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .big-heading {
+    font-size: 36px;
+  }
+
+  .bottom-icon {
+    font-size: 40px;
+  }
+
+  .bottom-item {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .about-section {
+    padding: 20px 10px; /* reduce horizontal padding */
+    background-position: top center; /* adjust background for mobile */
+    background-size: cover;
+  }
+
+  .about-container {
+    flex-direction: column; /* stack image on top */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-left {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center; /* center the image */
+  }
+
+  .about-left img {
+    width: 80%;
+    height: auto; /* maintain aspect ratio */
+  }
+
+  .about-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+    text-align: center; /* center headings and text */
+    gap: 15px;
+  }
+
+  .small-heading {
+    font-size: 16px;
+    padding-left: 0;
+  }
+
+  .small-heading::before {
+    width: 40px;
+    height: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -10px; /* adjust positioning */
+  }
+
+  .big-heading {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .about-bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .bottom-item {
+    font-size: 18px;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .bottom-icon {
+    font-size: 35px;
+  }
+
+  .about-bottom-border {
+    width: 80%;
+    height: 2px;
+    margin: 10px auto;
+  }
+}
+@media (max-width: 768px) {
+  .about-left {
+    flex: 1 1 100%;
+    max-width: 100%;
+    display: flex;           /* make it flex container */
+    justify-content: center; /* center child horizontally */
+    text-align: center;      /* optional for inline content */
+  }
+
+  .about-left img {
+    width: 80%;
+    height: auto;
+    display: block;   /* ensures margin auto works */
+    margin: 0 auto;   /* perfect horizontal centering */
+  }
+}
+

@@ -1,0 +1,175 @@
+.socialfeeds-container {
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 0 20px;
+  margin-bottom: 200px;
+}
+
+/* Header: Facebook - Title - Instagram */
+.socialfeeds-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.social-left, .social-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.facebook-icon { color: #1877F2; font-size: 24px; }
+.facebook-text { color: #1877F2; }
+.instagram-icon { color: #E4405F; font-size: 24px; }
+.instagram-text { color: #E4405F; }
+
+.socialfeeds-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Feeds Boxes */
+.socialfeeds-boxes {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-box {
+  flex: 1 1 500px;   /* grow/shrink instead of fixed */
+  width: 100%;       /* take full space */
+  max-width: 500px;  /* cap on large screens */
+  background: #f9f9f9;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 600px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.social-box iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100% !important;   /* ✅ always fill parent box */
+  height: 100% !important;
+  border: 0;
+}
+
+/* Follow Buttons */
+.socialfeeds-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.follow-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s ease;
+}
+.follow-btn:hover { transform: scale(1.05); }
+.facebook-btn { background-color: #1877F2; }
+.instagram-btn { background-color: #E4405F; }
+.btn-icon { font-size: 20px; }
+
+/* 📱 Tablet + Mobile (full width feed boxes) */
+@media screen and (max-width: 991px) {
+  .socialfeeds-container {
+    max-width: 100%;
+    padding: 0 10px;
+    margin: 30px auto;
+  }
+
+  .socialfeeds-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-box {
+    flex: 1 1 100% !important;
+    width: 100% !important;
+ max-width: 600px; /* optional, limit width */
+    min-height: auto;  /* remove fixed height */
+    position: relative;
+  }
+
+ .social-box iframe {
+    position: relative; /* remove absolute positioning */
+    width: 100% !important;
+    height: auto !important;  /* iframe adjusts naturally */
+    min-height: 500px;        /* optional for minimum height */
+    display: block;
+    margin: 0 auto;
+  }
+
+  .socialfeeds-header {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .socialfeeds-title {
+    font-size: 24px;
+    order: 0;
+  }
+
+  .social-left, .social-right {
+    order: 1;
+    font-size: 16px;
+  }
+}
+
+/* 📱 Small Mobile */
+@media screen and (max-width: 575px) {
+  .follow-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socialfeeds-title { font-size: 20px; }
+
+  .social-left, .social-right {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .social-box { min-height: 400px; }
+}
+/* 📱 Small Mobile */
+@media screen and (max-width: 575px) {
+  .socialfeeds-container {
+    margin-bottom: 200px; /* increased from 200px */
+  }
+
+  .follow-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .socialfeeds-title { font-size: 20px; }
+
+  .social-left, .social-right {
+    font-size: 14px;
+    gap: 6px;
+  }
+
+  .social-box { min-height: 400px; }
+}

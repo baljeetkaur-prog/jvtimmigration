@@ -1,0 +1,199 @@
+.recentvisa-page {
+  padding-bottom: 150px; 
+}
+
+/* Banner heading with yellow border */
+.recentvisa-heading {
+  position: relative;
+  display: inline-block;
+  font-size: 36px;
+  color: #fff;
+  padding-left: 20px;
+}
+
+.recentvisa-heading::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 2px;
+  background-color: #ffc000;
+}
+/* Heading above tabs with yellow left bar */
+.recentvisa-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+  padding-left: 55px; /* space for the yellow bar */
+  margin: 0 0 20px 0;
+  text-align: center; /* center text */
+  padding-bottom: 20px; 
+}
+
+/* Center the yellow bar vertically and horizontally before the text */
+.recentvisa-title::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* vertical center */
+  left: 50%; /* horizontal center relative to container */
+  transform: translate(-400%, -170%); /* move left to align before text */
+  width: 40px;
+  height: 4px;
+  background-color: #ffc000;
+}
+
+
+/* Container for tabs and grid */
+.recentvisa-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Tabs */
+.recentvisa-tabs {
+  display: flex;
+  flex-wrap: nowrap; /* prevent wrapping */
+  overflow-x: auto; /* allow horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 5px; /* add a little padding for scroll space */
+}
+.recentvisa-tabs::-webkit-scrollbar {
+  display: none;
+}
+.recentvisa-tabs {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.recentvisa-tab {
+  flex: 0 0 auto; /* do not shrink, width auto */
+  text-align: center;
+  padding: 12px 20px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Active tab */
+.recentvisa-tab.active {
+  color: #ffc000;
+}
+
+/* Animate full rectangle border */
+.recentvisa-tab::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: 2px solid #ffc000;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: width 0.3s ease, height 0.3s ease 0.3s;
+}
+
+/* Show full border on active tab */
+.recentvisa-tab.active::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Span inside tab (optional if needed for vertical alignment) */
+.recentvisa-tab span {
+  position: relative;
+  display: block;
+}
+
+/* Images grid */
+.recentvisa-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.no-images-text {
+  font-style: italic;
+  color: #888;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Hover overlay on image */
+.recentvisa-grid-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.recentvisa-grid-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.recentvisa-grid-item:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Modal for full-size image */
+.image-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 10000;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #ffc000;
+}
+

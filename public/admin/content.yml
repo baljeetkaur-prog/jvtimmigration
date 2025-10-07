@@ -5,6 +5,10 @@ backend:
 media_folder: "public/uploads"
 public_folder: "/uploads"
 
+media_library:
+  name: default
+  config: {}
+
 collections:
   - name: "pages"
     label: "Website Pages"
